@@ -1,6 +1,8 @@
 use ssh2::Session;
 use std::io::{Read, Write};
 use std::net::TcpStream;
+use std::thread::sleep;
+use std::time::{Duration, Instant};
 
 use crate::error::{Error, Result};
 use crate::models::{Fsp, OntInfo, OpticalInfo, ServicePort};
@@ -116,6 +118,23 @@ impl Connection {
         Ok(())
     }
 
+    pub fn ensure_config(&mut self) -> Result<()> {
+        match self.context.level {
+            SessionLevel::Config => Ok(()),
+            SessionLevel::InterfaceGpon => self.quit(),
+            SessionLevel::Enable => self.config(),
+            SessionLevel::Root => {
+                self.enable()?;
+                self.config()
+            }
+        }
+    }
+
+    pub fn ping(&mut self) -> Result<()> {
+        let _ = self.execute("")?;
+        Ok(())
+    }
+
     pub fn interface_gpon(&mut self, frame: u32, slot: u32) -> Result<()> {
         if self.context.level != SessionLevel::Config {
             return Err(Error::InvalidContext(
@@ -182,7 +201,13 @@ impl Connection {
         }
 
         let output = self.execute_command("display ont autofind all", "(config)#")?;
-        Ok(parse_ont_autofind(&output))
+        let entries = parse_ont_autofind(&output);
+        if entries.is_empty() && std::env::var("OLTCORE_DEBUG_OUTPUT").ok().as_deref() == Some("1")
+        {
+            let escaped = output.escape_default().to_string();
+            eprintln!("OLTCORE_DEBUG_OUTPUT: empty parse for display ont autofind all\n{escaped}");
+        }
+        Ok(entries)
     }
 
     pub fn display_ont_info_by_sn(&mut self, serial_number: &str) -> Result<Option<OntInfo>> {
@@ -396,11 +421,34 @@ impl Connection {
     }
 
     fn execute_command(&mut self, command: &str, expected_prompt: &str) -> Result<String> {
-        self.channel.write_all(command.as_bytes())?;
-        self.channel.write_all(b"\n")?;
-        self.channel.flush()?;
+        let max_retries = 3;
+        let retry_delay = Duration::from_secs(1);
+        let mut attempt = 0;
 
-        self.read_until_prompt(expected_prompt)
+        loop {
+            self.channel.write_all(command.as_bytes())?;
+            self.channel.write_all(b"\n")?;
+            self.channel.flush()?;
+
+            let output = self.read_until_prompt(expected_prompt)?;
+            if output.contains("Failure: System is busy") {
+                let retry_all = std::env::var("OLTCORE_RETRY_ALL").ok().as_deref() == Some("1");
+                let retry_allowed = should_retry_on_busy(command) || retry_all;
+                if retry_allowed && attempt < max_retries {
+                    attempt += 1;
+                    if std::env::var("OLTCORE_DEBUG_OUTPUT").ok().as_deref() == Some("1") {
+                        eprintln!("OLTCORE_DEBUG_OUTPUT: System is busy, retrying...");
+                    }
+                    sleep(retry_delay);
+                    continue;
+                }
+                return Err(Error::CommandFailed(
+                    "System is busy, please retry after a while".to_string(),
+                ));
+            }
+
+            return Ok(output);
+        }
     }
 
     fn read_until_prompt(&mut self, prompt: &str) -> Result<String> {
@@ -430,9 +478,47 @@ impl Connection {
                     }
 
                     let clean_output = output.replace("\x1b[37D", "");
+                    let trimmed = clean_output.trim_end();
+                    let suffix_match =
+                        prompt.ends_with('#') || prompt.ends_with('>') || prompt.ends_with(':');
 
-                    if clean_output.contains(prompt) {
-                        return Ok(clean_output);
+                    if (suffix_match && trimmed.ends_with(prompt))
+                        || (!suffix_match && clean_output.contains(prompt))
+                    {
+                        output = clean_output;
+                        self.session.set_blocking(false);
+                        let quiet_timeout = Duration::from_millis(300);
+                        let poll_sleep = Duration::from_millis(10);
+                        let mut last_read = Instant::now();
+                        loop {
+                            match self.channel.read(&mut buffer) {
+                                Ok(0) => {
+                                    if last_read.elapsed() >= quiet_timeout {
+                                        break;
+                                    }
+                                    sleep(poll_sleep);
+                                }
+                                Ok(n) => {
+                                    let text = String::from_utf8_lossy(&buffer[..n]);
+                                    output.push_str(&text);
+                                    last_read = Instant::now();
+                                }
+                                Err(e) => {
+                                    if e.kind() == std::io::ErrorKind::WouldBlock {
+                                        if last_read.elapsed() >= quiet_timeout {
+                                            break;
+                                        }
+                                        sleep(poll_sleep);
+                                        continue;
+                                    }
+                                    self.session.set_blocking(true);
+                                    return Err(Error::IoError(e));
+                                }
+                            }
+                        }
+                        self.session.set_blocking(true);
+                        let final_output = output.replace("\x1b[37D", "");
+                        return Ok(final_output);
                     }
 
                     output = clean_output;
@@ -443,6 +529,11 @@ impl Connection {
 
         Ok(output)
     }
+}
+
+fn should_retry_on_busy(command: &str) -> bool {
+    let cmd = command.trim_start().to_ascii_lowercase();
+    cmd.starts_with("display ") || cmd.starts_with("show ") || cmd.starts_with("list ")
 }
 
 impl Drop for Connection {
