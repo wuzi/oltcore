@@ -463,7 +463,7 @@ impl Connection {
                     let text = String::from_utf8_lossy(&buffer[..n]);
                     output.push_str(&text);
 
-                    if output.contains("---- More ( Press 'Q' to break ) ----") {
+                    if output.contains("---- More ( Press 'Q' to break ) ----") || output.contains(" }:") {
                         self.channel.write_all(b"\n")?;
                         self.channel.flush()?;
                         continue;
