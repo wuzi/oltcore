@@ -4,57 +4,77 @@ use regex::Regex;
 #[must_use]
 pub fn parse_ont_autofind(output: &str) -> Vec<OntAutofindEntry> {
     let mut entries = Vec::new();
-    let blocks: Vec<&str> = output
-        .split("----------------------------------------------------------------------------")
-        .filter(|s| s.contains("Number"))
-        .collect();
+    let output = output.replace('\r', "\n");
+    let mut current: Option<OntAutofindEntry> = None;
 
-    for block in blocks {
-        let mut entry = OntAutofindEntry {
-            number: 0,
-            fsp: String::new(),
-            ont_sn: String::new(),
-            ont_sn_readable: String::new(),
-            password: String::new(),
-            loid: String::new(),
-            checkcode: String::new(),
-            vendor_id: String::new(),
-            ont_version: String::new(),
-            ont_software_version: String::new(),
-            ont_equipment_id: String::new(),
-            ont_customized_info: String::new(),
-            ont_autofind_time: String::new(),
-        };
-
-        for line in block.lines() {
-            let line = line.trim();
-            if let Some((key, value)) = line.split_once(':') {
-                let key = key.trim();
-                let value = value.trim();
-
-                match key {
-                    "Number" => entry.number = value.parse().unwrap_or(0),
-                    "F/S/P" => entry.fsp = value.to_string(),
-                    "Ont SN" => {
-                        if let Some((sn, readable)) = value.split_once('(') {
-                            entry.ont_sn = sn.trim().to_string();
-                            entry.ont_sn_readable = readable.trim_end_matches(')').to_string();
-                        }
-                    }
-                    "Password" => entry.password = value.to_string(),
-                    "Loid" => entry.loid = value.to_string(),
-                    "Checkcode" => entry.checkcode = value.to_string(),
-                    "VendorID" => entry.vendor_id = value.to_string(),
-                    "Ont Version" => entry.ont_version = value.to_string(),
-                    "Ont SoftwareVersion" => entry.ont_software_version = value.to_string(),
-                    "Ont EquipmentID" => entry.ont_equipment_id = value.to_string(),
-                    "Ont Customized Info" => entry.ont_customized_info = value.to_string(),
-                    "Ont autofind time" => entry.ont_autofind_time = value.to_string(),
-                    _ => {}
-                }
-            }
+    for line in output.lines() {
+        let line = line.trim();
+        if line.is_empty() {
+            continue;
         }
 
+        let Some((key, value)) = line.split_once(':') else {
+            continue;
+        };
+
+        let key = key.trim();
+        let value = value.trim();
+
+        if key == "Number" {
+            if let Some(entry) = current.take() {
+                if entry.number > 0 {
+                    entries.push(entry);
+                }
+            }
+
+            let mut entry = OntAutofindEntry {
+                number: 0,
+                fsp: String::new(),
+                ont_sn: String::new(),
+                ont_sn_readable: String::new(),
+                password: String::new(),
+                loid: String::new(),
+                checkcode: String::new(),
+                vendor_id: String::new(),
+                ont_version: String::new(),
+                ont_software_version: String::new(),
+                ont_equipment_id: String::new(),
+                ont_customized_info: String::new(),
+                ont_autofind_time: String::new(),
+            };
+            entry.number = value.parse().unwrap_or(0);
+            current = Some(entry);
+            continue;
+        }
+
+        let Some(entry) = current.as_mut() else {
+            continue;
+        };
+
+        match key {
+            "F/S/P" => entry.fsp = value.to_string(),
+            "Ont SN" => {
+                if let Some((sn, readable)) = value.split_once('(') {
+                    entry.ont_sn = sn.trim().to_string();
+                    entry.ont_sn_readable = readable.trim_end_matches(')').to_string();
+                } else {
+                    entry.ont_sn = value.to_string();
+                }
+            }
+            "Password" => entry.password = value.to_string(),
+            "Loid" => entry.loid = value.to_string(),
+            "Checkcode" => entry.checkcode = value.to_string(),
+            "VendorID" => entry.vendor_id = value.to_string(),
+            "Ont Version" => entry.ont_version = value.to_string(),
+            "Ont SoftwareVersion" => entry.ont_software_version = value.to_string(),
+            "Ont EquipmentID" => entry.ont_equipment_id = value.to_string(),
+            "Ont Customized Info" => entry.ont_customized_info = value.to_string(),
+            "Ont autofind time" => entry.ont_autofind_time = value.to_string(),
+            _ => {}
+        }
+    }
+
+    if let Some(entry) = current {
         if entry.number > 0 {
             entries.push(entry);
         }
@@ -335,5 +355,15 @@ mod tests {
         let output = "The required ONT does not exist";
         let info = parse_ont_info(output);
         assert!(info.is_none());
+    }
+
+    #[test]
+    fn parse_ont_autofind_with_carriage_returns() {
+        let output = "Number              : 1\r\nF/S/P               : 0/6/1\r\nOnt SN              : 4444 (DD72-ABCD)\r\n";
+        let entries = parse_ont_autofind(output);
+        assert_eq!(entries.len(), 1);
+        assert_eq!(entries[0].number, 1);
+        assert_eq!(entries[0].fsp, "0/6/1");
+        assert_eq!(entries[0].ont_sn_readable, "DD72-ABCD");
     }
 }

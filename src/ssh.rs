@@ -1,5 +1,5 @@
 use ssh2::Session;
-use std::io::{Read, Write};
+use std::io::{ErrorKind, Read, Write};
 use std::net::TcpStream;
 
 use crate::error::{Error, Result};
@@ -438,6 +438,7 @@ impl Connection {
     }
 
     fn execute_command(&mut self, command: &str, expected_prompt: &str) -> Result<String> {
+        self.drain_channel_available(None)?;
         self.channel.write_all(command.as_bytes())?;
         self.channel.write_all(b"\n")?;
         self.channel.flush()?;
@@ -455,6 +456,8 @@ impl Connection {
     fn read_until_prompt(&mut self, prompt: &str) -> Result<String> {
         let mut buffer = vec![0; 4096];
         let mut output = String::new();
+        let mut sent_more = false;
+        let mut sent_cr_prompt = false;
 
         loop {
             match self.channel.read(&mut buffer) {
@@ -463,14 +466,19 @@ impl Connection {
                     let text = String::from_utf8_lossy(&buffer[..n]);
                     output.push_str(&text);
 
-                    if output.contains("---- More ( Press 'Q' to break ) ----")
-                        || output.contains(" }:")
-                    {
+                    if !sent_more && text.contains("---- More ( Press 'Q' to break ) ----") {
+                        sent_more = true;
                         self.channel.write_all(b"\n")?;
                         self.channel.flush()?;
                     }
 
-                    if output.contains(prompt) {
+                    if !sent_cr_prompt && text.contains(" }:") {
+                        sent_cr_prompt = true;
+                        self.channel.write_all(b"\n")?;
+                        self.channel.flush()?;
+                    }
+
+                    if output.trim_end().ends_with(prompt) {
                         break;
                     }
                 }
@@ -478,7 +486,34 @@ impl Connection {
             }
         }
 
+        self.drain_channel_available(Some(&mut output))?;
+
         Ok(output)
+    }
+
+    fn drain_channel_available(&mut self, mut output: Option<&mut String>) -> Result<()> {
+        self.session.set_blocking(false);
+
+        let mut buffer = [0u8; 4096];
+        loop {
+            match self.channel.read(&mut buffer) {
+                Ok(0) => break,
+                Ok(n) => {
+                    let text = String::from_utf8_lossy(&buffer[..n]);
+                    if let Some(out) = output.as_deref_mut() {
+                        out.push_str(&text);
+                    }
+                }
+                Err(e) if e.kind() == ErrorKind::WouldBlock => break,
+                Err(e) => {
+                    self.session.set_blocking(true);
+                    return Err(Error::IoError(e));
+                }
+            }
+        }
+
+        self.session.set_blocking(true);
+        Ok(())
     }
 }
 
