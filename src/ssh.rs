@@ -58,7 +58,7 @@ pub struct Connection {
 }
 
 impl Connection {
-    pub fn connect(host: &str, port: u16, username: &str, password: &str) -> Result<Self> {
+    pub fn connect(host: &str, port: i32, username: &str, password: &str) -> Result<Self> {
         let addr = format!("{host}:{port}");
         let tcp = TcpStream::connect(&addr).map_err(|e| Error::ConnectionFailed(e.to_string()))?;
 

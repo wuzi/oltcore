@@ -6,7 +6,7 @@ use r2d2::Pool;
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     let host = "127.0.0.1";
-    let port: u16 = 2222;
+    let port: i32 = 2222;
     let username = "";
     let password = "";
 

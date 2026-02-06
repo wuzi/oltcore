@@ -9,14 +9,14 @@ use crate::ssh::Connection;
 #[derive(Clone)]
 pub struct ConnectionManager {
     host: String,
-    port: u16,
+    port: i32,
     user: String,
     pass: String,
 }
 
 impl ConnectionManager {
     #[must_use]
-    pub fn new<S: Into<String>>(host: S, port: u16, user: S, pass: S) -> Self {
+    pub fn new<S: Into<String>>(host: S, port: i32, user: S, pass: S) -> Self {
         Self {
             host: host.into(),
             port,
