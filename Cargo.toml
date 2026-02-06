@@ -6,7 +6,7 @@ description = "A Rust library for interacting with Huawei MA5800 OLT devices"
 license = "MIT"
 categories = ["network-programming"]
 keywords = ["huawei", "olt", "ma5800", "ssh", "networking"]
-repository = "https://github.com/hubnarinet/oltcore"
+repository = "https://github.com/wuzi/oltcore"
 
 [dependencies]
 ssh2 = "0.9"
