@@ -1,4 +1,5 @@
-use crate::models::{OntAutofindEntry, OntInfo};
+use crate::models::{OntAutofindEntry, OntInfo, OpticalInfo, ServicePort};
+use regex::Regex;
 
 #[must_use]
 pub fn parse_ont_autofind(output: &str) -> Vec<OntAutofindEntry> {
@@ -64,6 +65,10 @@ pub fn parse_ont_autofind(output: &str) -> Vec<OntAutofindEntry> {
 
 #[must_use]
 pub fn parse_ont_info(output: &str) -> Option<OntInfo> {
+    if output.contains("The required ONT does not exist") {
+        return None;
+    }
+
     let mut info = OntInfo {
         fsp: String::new(),
         ont_id: 0,
@@ -146,6 +151,167 @@ pub fn parse_ont_info(output: &str) -> Option<OntInfo> {
     }
 }
 
+#[must_use]
+#[allow(clippy::too_many_lines)]
+pub fn parse_optical_info(output: &str) -> Option<OpticalInfo> {
+    let mut info = OpticalInfo {
+        onu_nni_port_id: String::new(),
+        module_type: String::new(),
+        module_sub_type: String::new(),
+        used_type: String::new(),
+        encapsulation_type: String::new(),
+        optical_power_precision: String::new(),
+        vendor_name: String::new(),
+        vendor_rev: String::new(),
+        vendor_pn: String::new(),
+        vendor_sn: String::new(),
+        date_code: String::new(),
+        rx_optical_power: String::new(),
+        rx_power_current_warning_threshold: String::new(),
+        rx_power_current_alarm_threshold: String::new(),
+        tx_optical_power: String::new(),
+        tx_power_current_warning_threshold: String::new(),
+        tx_power_current_alarm_threshold: String::new(),
+        laser_bias_current: String::new(),
+        tx_bias_current_warning_threshold: String::new(),
+        tx_bias_current_alarm_threshold: String::new(),
+        temperature: String::new(),
+        temperature_warning_threshold: String::new(),
+        temperature_alarm_threshold: String::new(),
+        voltage: String::new(),
+        supply_voltage_warning_threshold: String::new(),
+        supply_voltage_alarm_threshold: String::new(),
+        olt_rx_ont_optical_power: String::new(),
+        catv_rx_optical_power: String::new(),
+        catv_rx_power_alarm_threshold: String::new(),
+    };
+
+    let mut found_data = false;
+
+    for line in output.lines() {
+        let line = line.trim();
+        if let Some((key, value)) = line.split_once(':') {
+            let key = key.trim();
+            let value = value.trim();
+
+            match key {
+                "ONU NNI port ID" => {
+                    info.onu_nni_port_id = value.to_string();
+                    found_data = true;
+                }
+                "Module type" => info.module_type = value.to_string(),
+                "Module sub-type" => info.module_sub_type = value.to_string(),
+                "Used type" => info.used_type = value.to_string(),
+                "Encapsulation Type" => info.encapsulation_type = value.to_string(),
+                "Optical power precision(dBm)" => info.optical_power_precision = value.to_string(),
+                "Vendor name" => info.vendor_name = value.to_string(),
+                "Vendor rev" => info.vendor_rev = value.to_string(),
+                "Vendor PN" => info.vendor_pn = value.to_string(),
+                "Vendor SN" => info.vendor_sn = value.to_string(),
+                "Date Code" => info.date_code = value.to_string(),
+                "Rx optical power(dBm)" => info.rx_optical_power = value.to_string(),
+                "Rx power current warning threshold(dBm)" => {
+                    info.rx_power_current_warning_threshold = value.to_string();
+                }
+                "Rx power current alarm threshold(dBm)" => {
+                    info.rx_power_current_alarm_threshold = value.to_string();
+                }
+                "Tx optical power(dBm)" => info.tx_optical_power = value.to_string(),
+                "Tx power current warning threshold(dBm)" => {
+                    info.tx_power_current_warning_threshold = value.to_string();
+                }
+                "Tx power current alarm threshold(dBm)" => {
+                    info.tx_power_current_alarm_threshold = value.to_string();
+                }
+                "Laser bias current(mA)" => info.laser_bias_current = value.to_string(),
+                "Tx bias current warning threshold(mA)" => {
+                    info.tx_bias_current_warning_threshold = value.to_string();
+                }
+                "Tx bias current alarm threshold(mA)" => {
+                    info.tx_bias_current_alarm_threshold = value.to_string();
+                }
+                "Temperature(C)" => info.temperature = value.to_string(),
+                "Temperature warning threshold(C)" => {
+                    info.temperature_warning_threshold = value.to_string();
+                }
+                "Temperature alarm threshold(C)" => {
+                    info.temperature_alarm_threshold = value.to_string();
+                }
+                "Voltage(V)" => info.voltage = value.to_string(),
+                "Supply voltage warning threshold(V)" => {
+                    info.supply_voltage_warning_threshold = value.to_string();
+                }
+                "Supply voltage alarm threshold(V)" => {
+                    info.supply_voltage_alarm_threshold = value.to_string();
+                }
+                "OLT Rx ONT optical power(dBm)" => {
+                    info.olt_rx_ont_optical_power = value.to_string();
+                }
+                "CATV Rx optical power(dBm)" => info.catv_rx_optical_power = value.to_string(),
+                "CATV Rx power alarm threshold(dBm)" => {
+                    info.catv_rx_power_alarm_threshold = value.to_string();
+                }
+                _ => {}
+            }
+        }
+    }
+
+    if found_data {
+        Some(info)
+    } else {
+        None
+    }
+}
+
+#[must_use]
+pub fn parse_service_ports(output: &str) -> Vec<ServicePort> {
+    let mut ports = Vec::new();
+
+    if output.contains("Failure: No service virtual port can be operated") {
+        return ports;
+    }
+
+    // Regex to match service port lines
+    // Example: "  1234  100  gpon  0/4/0  1  20  100  translate  inbound  10  10  flow"
+    let Ok(re) = Regex::new(
+        r"\s+(\d+)\s+(\d+)\s+\w+\s+\d+/\d+/\d+\s+\d+\s+\d+\s+\d+\s+\w+\s+\w+\s+\d+\s+\d+\s+\w+",
+    ) else {
+        return ports;
+    };
+
+    for cap in re.captures_iter(output) {
+        if let (Some(index), Some(vlan)) = (cap.get(1), cap.get(2)) {
+            if let (Ok(index), Ok(vlan)) = (index.as_str().parse(), vlan.as_str().parse()) {
+                ports.push(ServicePort { index, vlan });
+            }
+        }
+    }
+
+    ports
+}
+
+#[must_use]
+pub fn extract_ont_id(output: &str) -> Option<u32> {
+    let re = Regex::new(r"ONTID\s*:(\d+)").ok()?;
+    re.captures(output)
+        .and_then(|cap| cap.get(1))
+        .and_then(|m| m.as_str().parse().ok())
+}
+
+pub fn check_for_failure(output: &str) -> crate::error::Result<()> {
+    for line in output.lines() {
+        let line = line.trim();
+        if line.starts_with("Failure: ") {
+            let msg = line.trim_start_matches("Failure: ");
+            return Err(crate::error::Error::CommandFailed(msg.to_string()));
+        }
+        if line.contains("Parameter error") {
+            return Err(crate::error::Error::InvalidSerialNumber);
+        }
+    }
+    Ok(())
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -160,6 +326,13 @@ mod tests {
     #[test]
     fn parse_ont_info_empty() {
         let output = "";
+        let info = parse_ont_info(output);
+        assert!(info.is_none());
+    }
+
+    #[test]
+    fn parse_ont_info_not_found() {
+        let output = "The required ONT does not exist";
         let info = parse_ont_info(output);
         assert!(info.is_none());
     }

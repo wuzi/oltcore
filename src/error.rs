@@ -10,6 +10,10 @@ pub enum Error {
     AuthenticationFailed,
     ConnectionFailed(String),
     DeviceError(String),
+    NotFound,
+    InvalidSerialNumber,
+    InvalidContext(String),
+    CommandFailed(String),
 }
 
 impl fmt::Display for Error {
@@ -21,6 +25,10 @@ impl fmt::Display for Error {
             Self::AuthenticationFailed => write!(f, "SSH authentication failed"),
             Self::ConnectionFailed(msg) => write!(f, "Connection failed: {msg}"),
             Self::DeviceError(msg) => write!(f, "Device error: {msg}"),
+            Self::NotFound => write!(f, "ONT not found"),
+            Self::InvalidSerialNumber => write!(f, "Invalid serial number"),
+            Self::InvalidContext(msg) => write!(f, "Invalid context: {msg}"),
+            Self::CommandFailed(msg) => write!(f, "Command failed: {msg}"),
         }
     }
 }

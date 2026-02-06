@@ -8,6 +8,6 @@ pub mod parser;
 pub mod ssh;
 
 pub use error::{Error, Result};
-pub use models::{OntAutofindEntry, OntInfo};
-pub use parser::{parse_ont_autofind, parse_ont_info};
+pub use models::{Fsp, OntAutofindEntry, OntInfo, OpticalInfo, ServicePort};
+pub use parser::{parse_ont_autofind, parse_ont_info, parse_optical_info, parse_service_ports};
 pub use ssh::Connection;

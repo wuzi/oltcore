@@ -59,3 +59,72 @@ pub struct OntInfo {
     pub service_profile_id: u32,
     pub service_profile_name: String,
 }
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct OpticalInfo {
+    pub onu_nni_port_id: String,
+    pub module_type: String,
+    pub module_sub_type: String,
+    pub used_type: String,
+    pub encapsulation_type: String,
+    pub optical_power_precision: String,
+    pub vendor_name: String,
+    pub vendor_rev: String,
+    pub vendor_pn: String,
+    pub vendor_sn: String,
+    pub date_code: String,
+    pub rx_optical_power: String,
+    pub rx_power_current_warning_threshold: String,
+    pub rx_power_current_alarm_threshold: String,
+    pub tx_optical_power: String,
+    pub tx_power_current_warning_threshold: String,
+    pub tx_power_current_alarm_threshold: String,
+    pub laser_bias_current: String,
+    pub tx_bias_current_warning_threshold: String,
+    pub tx_bias_current_alarm_threshold: String,
+    pub temperature: String,
+    pub temperature_warning_threshold: String,
+    pub temperature_alarm_threshold: String,
+    pub voltage: String,
+    pub supply_voltage_warning_threshold: String,
+    pub supply_voltage_alarm_threshold: String,
+    pub olt_rx_ont_optical_power: String,
+    pub catv_rx_optical_power: String,
+    pub catv_rx_power_alarm_threshold: String,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct ServicePort {
+    pub index: u32,
+    pub vlan: u32,
+}
+
+/// Frame/Slot/Port representation
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub struct Fsp {
+    pub frame: u32,
+    pub slot: u32,
+    pub port: u32,
+}
+
+impl Fsp {
+    #[must_use]
+    pub fn parse(fsp: &str) -> Option<Self> {
+        let parts: Vec<&str> = fsp.split('/').collect();
+        if parts.len() != 3 {
+            return None;
+        }
+
+        Some(Self {
+            frame: parts[0].parse().ok()?,
+            slot: parts[1].parse().ok()?,
+            port: parts[2].parse().ok()?,
+        })
+    }
+}
+
+impl std::fmt::Display for Fsp {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(f, "{}/{}/{}", self.frame, self.slot, self.port)
+    }
+}
