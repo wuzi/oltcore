@@ -249,6 +249,24 @@ impl Connection {
         Ok(parse_ont_info(&output))
     }
 
+    pub fn display_ont_info_by_mac(&mut self, mac_address: &str) -> Result<Option<OntInfo>> {
+        if self.context.level != SessionLevel::Config {
+            return Err(Error::InvalidContext("Must be in config mode".to_string()));
+        }
+
+        let cmd = format!("display ont info by-mac {mac_address}");
+        let output = self.execute_command(&cmd, "(config)#")?;
+
+        if output.contains("The required ONT does not exist") {
+            return Ok(None);
+        }
+        if output.contains("Parameter error") {
+            return Err(Error::InvalidMacAddress);
+        }
+
+        Ok(parse_ont_info(&output))
+    }
+
     pub fn display_ont_optical_info(
         &mut self,
         port: u32,

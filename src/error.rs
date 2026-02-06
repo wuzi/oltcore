@@ -12,6 +12,7 @@ pub enum Error {
     DeviceError(String),
     NotFound,
     InvalidSerialNumber,
+    InvalidMacAddress,
     InvalidContext(String),
     CommandFailed(String),
 }
@@ -27,6 +28,7 @@ impl fmt::Display for Error {
             Self::DeviceError(msg) => write!(f, "Device error: {msg}"),
             Self::NotFound => write!(f, "ONT not found"),
             Self::InvalidSerialNumber => write!(f, "Invalid serial number"),
+            Self::InvalidMacAddress => write!(f, "Invalid MAC address"),
             Self::InvalidContext(msg) => write!(f, "Invalid context: {msg}"),
             Self::CommandFailed(msg) => write!(f, "Command failed: {msg}"),
         }
