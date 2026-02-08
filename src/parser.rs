@@ -30,17 +30,17 @@ pub fn parse_ont_autofind(output: &str) -> Vec<OntAutofindEntry> {
             let mut entry = OntAutofindEntry {
                 number: 0,
                 fsp: String::new(),
-                ont_sn: String::new(),
-                ont_sn_readable: String::new(),
+                serial_number: String::new(),
+                serial_number_readable: String::new(),
                 password: String::new(),
-                loid: String::new(),
-                checkcode: String::new(),
+                lo_id: String::new(),
+                check_code: String::new(),
                 vendor_id: String::new(),
-                ont_version: String::new(),
-                ont_software_version: String::new(),
-                ont_equipment_id: String::new(),
-                ont_customized_info: String::new(),
-                ont_autofind_time: String::new(),
+                version: String::new(),
+                software_version: String::new(),
+                equipment_id: String::new(),
+                customized_info: String::new(),
+                auto_find_time: String::new(),
             };
             entry.number = value.parse().unwrap_or(0);
             current = Some(entry);
@@ -55,21 +55,21 @@ pub fn parse_ont_autofind(output: &str) -> Vec<OntAutofindEntry> {
             "F/S/P" => entry.fsp = value.to_string(),
             "Ont SN" => {
                 if let Some((sn, readable)) = value.split_once('(') {
-                    entry.ont_sn = sn.trim().to_string();
-                    entry.ont_sn_readable = readable.trim_end_matches(')').to_string();
+                    entry.serial_number = sn.trim().to_string();
+                    entry.serial_number_readable = readable.trim_end_matches(')').to_string();
                 } else {
-                    entry.ont_sn = value.to_string();
+                    entry.serial_number = value.to_string();
                 }
             }
             "Password" => entry.password = value.to_string(),
-            "Loid" => entry.loid = value.to_string(),
-            "Checkcode" => entry.checkcode = value.to_string(),
+            "Loid" => entry.lo_id = value.to_string(),
+            "Checkcode" => entry.check_code = value.to_string(),
             "VendorID" => entry.vendor_id = value.to_string(),
-            "Ont Version" => entry.ont_version = value.to_string(),
-            "Ont SoftwareVersion" => entry.ont_software_version = value.to_string(),
-            "Ont EquipmentID" => entry.ont_equipment_id = value.to_string(),
-            "Ont Customized Info" => entry.ont_customized_info = value.to_string(),
-            "Ont autofind time" => entry.ont_autofind_time = value.to_string(),
+            "Ont Version" => entry.version = value.to_string(),
+            "Ont SoftwareVersion" => entry.software_version = value.to_string(),
+            "Ont EquipmentID" => entry.equipment_id = value.to_string(),
+            "Ont Customized Info" => entry.customized_info = value.to_string(),
+            "Ont autofind time" => entry.auto_find_time = value.to_string(),
             _ => {}
         }
     }
@@ -91,14 +91,14 @@ pub fn parse_ont_info(output: &str) -> Option<OntInfo> {
 
     let mut info = OntInfo {
         fsp: String::new(),
-        ont_id: 0,
+        id: 0,
         control_flag: String::new(),
         run_state: String::new(),
         config_state: String::new(),
         match_state: String::new(),
         dba_type: String::new(),
-        ont_distance: 0,
-        ont_last_distance: 0,
+        distance: 0,
+        last_distance: 0,
         memory_occupation: String::new(),
         cpu_occupation: String::new(),
         temperature: 0,
@@ -110,7 +110,7 @@ pub fn parse_ont_info(output: &str) -> Option<OntInfo> {
         last_down_cause: String::new(),
         last_up_time: String::new(),
         last_down_time: String::new(),
-        ont_online_duration: String::new(),
+        online_duration: String::new(),
         line_profile_id: 0,
         line_profile_name: String::new(),
         service_profile_id: 0,
@@ -125,14 +125,14 @@ pub fn parse_ont_info(output: &str) -> Option<OntInfo> {
 
             match key {
                 "F/S/P" => info.fsp = value.to_string(),
-                "ONT-ID" => info.ont_id = value.parse().unwrap_or(0),
+                "ONT-ID" => info.id = value.parse().unwrap_or(0),
                 "Control flag" => info.control_flag = value.to_string(),
                 "Run state" => info.run_state = value.to_string(),
                 "Config state" => info.config_state = value.to_string(),
                 "Match state" => info.match_state = value.to_string(),
                 "DBA type" => info.dba_type = value.to_string(),
-                "ONT distance(m)" => info.ont_distance = value.parse().unwrap_or(0),
-                "ONT last distance(m)" => info.ont_last_distance = value.parse().unwrap_or(0),
+                "ONT distance(m)" => info.distance = value.parse().unwrap_or(0),
+                "ONT last distance(m)" => info.last_distance = value.parse().unwrap_or(0),
                 "Memory occupation" => info.memory_occupation = value.to_string(),
                 "CPU occupation" => info.cpu_occupation = value.to_string(),
                 "Temperature" => {
@@ -154,7 +154,7 @@ pub fn parse_ont_info(output: &str) -> Option<OntInfo> {
                 "Last down cause" => info.last_down_cause = value.to_string(),
                 "Last up time" => info.last_up_time = value.to_string(),
                 "Last down time" => info.last_down_time = value.to_string(),
-                "ONT online duration" => info.ont_online_duration = value.to_string(),
+                "ONT online duration" => info.online_duration = value.to_string(),
                 "Line profile ID" => info.line_profile_id = value.parse().unwrap_or(0),
                 "Line profile name" => info.line_profile_name = value.to_string(),
                 "Service profile ID" => info.service_profile_id = value.parse().unwrap_or(0),
@@ -364,6 +364,6 @@ mod tests {
         assert_eq!(entries.len(), 1);
         assert_eq!(entries[0].number, 1);
         assert_eq!(entries[0].fsp, "0/6/1");
-        assert_eq!(entries[0].ont_sn_readable, "DD72-ABCD");
+        assert_eq!(entries[0].serial_number_readable, "DD72-ABCD");
     }
 }

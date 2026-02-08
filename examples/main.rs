@@ -37,7 +37,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
                 call_start.elapsed()
             );
             for (i, ont) in terminals.iter().enumerate() {
-                println!("  {}. {}", i + 1, ont.ont_sn_readable);
+                println!("  {}. {}", i + 1, ont.serial_number_readable);
             }
         }
 
