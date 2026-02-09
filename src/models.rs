@@ -24,7 +24,7 @@ pub struct OntAutofindEntry {
     pub auto_find_time: String,
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize, ToSchema)]
 pub struct OntInfo {
     /// Frame/Slot/Port
     pub fsp: String,
@@ -61,7 +61,7 @@ pub struct OntInfo {
     pub service_profile_name: String,
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize, ToSchema)]
 pub struct OpticalInfo {
     pub onu_nni_port_id: String,
     pub module_type: String,
@@ -94,7 +94,7 @@ pub struct OpticalInfo {
     pub catv_rx_power_alarm_threshold: String,
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize, ToSchema)]
 pub struct ServicePort {
     pub index: u32,
     pub vlan: u32,
