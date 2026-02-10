@@ -1,6 +1,8 @@
 use serde::{Deserialize, Serialize};
 use utoipa::ToSchema;
 
+// TODO: make fsp a separate struct and implement parsing logic there, to make using it easier and less error-prone
+
 #[derive(Debug, Clone, Serialize, Deserialize, ToSchema)]
 pub struct OntAutofindEntry {
     /// ONT entry number
@@ -75,6 +77,32 @@ pub struct OntInfo {
     pub line_profile_name: String,
     pub service_profile_id: u32,
     pub service_profile_name: String,
+}
+
+impl OntInfo {
+    #[must_use]
+    pub fn port(&self) -> Option<u32> {
+        let parts: Vec<&str> = self.fsp.split('/').collect();
+        if parts.len() != 3 {
+            return None;
+        }
+
+        parts[2].parse().ok()
+    }
+
+    #[must_use]
+    pub fn fsp(&self) -> Option<Fsp> {
+        let parts: Vec<&str> = self.fsp.split('/').collect();
+        if parts.len() != 3 {
+            return None;
+        }
+
+        let frame = parts[0].parse().ok()?;
+        let slot = parts[1].parse().ok()?;
+        let port = parts[2].parse().ok()?;
+
+        Some(Fsp { frame, slot, port })
+    }
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize, ToSchema)]
