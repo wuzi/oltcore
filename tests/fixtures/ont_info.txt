@@ -1,24 +1,176 @@
-F/S/P: 0/2/3
-ONT-ID: 42
-Control flag: active
-Run state: online
-Config state: normal
-Match state: match
-DBA type: DBA1
-ONT distance(m): 120
-ONT last distance(m): 115
-Memory occupation: 15%
-CPU occupation: 5%
-Temperature: 45(C)
-Authentic type: sn
-SN: 1234 (ABCD-1234)
-Management mode: OMCI
-Description: test ont
-Last down cause: loss
-Last up time: 2024-01-01 00:00:00
-Last down time: 2024-01-01 01:00:00
-ONT online duration: 1h
-Line profile ID: 10
-Line profile name: line10
-Service profile ID: 20
-Service profile name: svc20
+MA5680T(config)#display ont info by-sn 48575443CB8FBDB4
+  -----------------------------------------------------------------------------
+  F/S/P                   : 0/9/2
+  ONT-ID                  : 0
+  Control flag            : active
+  Run state               : online
+  Config state            : normal
+  Match state             : match
+  DBA type                : SR
+  ONT distance(m)         : 1826
+  ONT last distance(m)    : 1826
+  ONT battery state       : not support
+  ONT power type          : -
+  Memory occupation       : 48%
+  CPU occupation          : 1%
+  Temperature             : 54(C)
+  Authentic type          : SN-auth
+  SN                      : 48575443CB8FBDB4 (HWTC-CB8FBDB4)
+  Management mode         : OMCI
+  Software work mode      : normal
+  Isolation state         : normal
+  ONT IP 0 address/mask   : -
+  Description             : JFTECH
+  Last down cause         : dying-gasp
+  Last up time            : 20/01/2026 08:44:35+08:00
+  Last down time          : 20/01/2026 08:41:24+08:00
+  Last dying gasp time    : 20/01/2026 08:41:24+08:00
+  ONT online duration     : 21 day(s), 21 hour(s), 57 minute(s), 0 second(s) 
+  ONT system up duration  : 21 day(s), 21 hour(s), 58 minute(s), 44 second(s) 
+  Type C support          : Not support
+  Interoperability-mode   : ITU-T    
+  Power reduction status  : -        
+  FEC upstream state      : use-profile-config
+  -----------------------------------------------------------------------------
+  VoIP configure method   : Default  
+  -----------------------------------------------------------------------------
+  Line profile ID      : 60          
+  Line profile name    : LP_DADOS_VOIP_ALL
+  -----------------------------------------------------------------------------
+  FEC upstream switch :Disable       
+  OMCC encrypt switch :Off           
+  Qos mode            :PQ            
+  Mapping mode        :VLAN          
+  TR069 management    :Disable       
+  TR069 IP index      :0             
+  ------------------------------------------------------------------------------
+  Notes: * indicates Discrete TCONT(TCONT Unbound)
+  ------------------------------------------------------------------------------
+  <T-CONT   0>          DBA Profile-ID:1
+  <T-CONT   1>          DBA Profile-ID:10
+   <Gem Index 20>                    
+   --------------------------------------------------------------------
+   |Serv-Type:ETH |Encrypt:on  |Cascade:off |GEM-CAR:-            |
+   |Upstream-priority-queue:0  |Downstream-priority-queue:-       |
+   --------------------------------------------------------------------
+    Mapping VLAN  Priority Port    Port  Bundle  Flow  Transparent
+    index                  type    ID    ID      CAR   
+   --------------------------------------------------------------------
+    0       20    -        -       -     -       -     -          
+   --------------------------------------------------------------------
+  <T-CONT   2>          DBA Profile-ID:10
+   <Gem Index 30>                    
+   --------------------------------------------------------------------
+   |Serv-Type:ETH |Encrypt:on  |Cascade:off |GEM-CAR:-            |
+   |Upstream-priority-queue:0  |Downstream-priority-queue:-       |
+   --------------------------------------------------------------------
+    Mapping VLAN  Priority Port    Port  Bundle  Flow  Transparent
+    index                  type    ID    ID      CAR   
+   --------------------------------------------------------------------
+    0       30    -        -       -     -       -     -          
+   --------------------------------------------------------------------
+  ------------------------------------------------------------------------------
+  Notes: Run the display traffic table ip command to query 
+         traffic table configuration 
+  -----------------------------------------------------------------------------
+  Service profile ID   : 35          
+  Service profile name : SP_DADOS_VOIP_ALL
+  -----------------------------------------------------------------------------
+  Port-type     Port-number     Max-adaptive-number
+  -----------------------------------------------------------------------------
+  POTS          adaptive        32   
+  ETH           adaptive        8    
+  VDSL          0               -    
+  TDM           0               -    
+  MOCA          0               -    
+  CATV          0               -    
+  -----------------------------------------------------------------------------
+  TDM port type                     : E1
+  TDM service type                  : TDMoGem
+  MAC learning function switch      : Enable
+  ONT transparent function switch   : Disable
+  Ring check switch                 : Disable
+  Ring port auto-shutdown           : Enable
+  Ring detect frequency             : 8 (pps)
+  Ring resume interval              : 300 (s)
+  Multicast forward mode            : Unconcern
+  Multicast forward VLAN            : -
+  Multicast mode                    : Unconcern
+  Upstream IGMP packet forward mode : Unconcern
+  Upstream IGMP packet forward VLAN : -
+  Upstream IGMP packet priority     : -
+  Native VLAN option                : Concern
+  Upstream PQ color policy          : -
+  Downstream PQ color policy        : -
+  Monitor link                      : Unconcern
+  MTU(byte)                         : Unconcern
+  -----------------------------------------------------------------------------
+  Port-type Port-ID QinQmode  PriorityPolicy Inbound     Outbound
+  -----------------------------------------------------------------------------
+  ETH       1       unconcern unconcern      unconcern   unconcern
+  ETH       2       unconcern unconcern      unconcern   unconcern
+  ETH       3       unconcern unconcern      unconcern   unconcern
+  ETH       4       unconcern unconcern      unconcern   unconcern
+  ETH       5       unconcern unconcern      unconcern   unconcern
+  ETH       6       unconcern unconcern      unconcern   unconcern
+  ETH       7       unconcern unconcern      unconcern   unconcern
+  ETH       8       unconcern unconcern      unconcern   unconcern
+  -----------------------------------------------------------------------------
+  Notes: * indicates the discretely configured traffic profile,
+         run the display traffic table ip command to query
+         traffic table configuration.
+  -----------------------------------------------------------------------------
+  Port-type Port-ID  DownstreamMode  MismatchPolicy
+  -----------------------------------------------------------------------------
+  ETH             1  operation       discard       
+  ETH             2  operation       discard       
+  ETH             3  operation       discard       
+  ETH             4  operation       discard       
+  ETH             5  operation       discard       
+  ETH             6  operation       discard       
+  ETH             7  operation       discard       
+  ETH             8  operation       discard       
+  -----------------------------------------------------------------------------
+  Port-type Port-ID Dscp-mapping-table-index Classification-profile-id
+  -----------------------------------------------------------------------------
+  ETH       1       0                        -        
+  ETH       2       0                        -        
+  ETH       3       0                        -        
+  ETH       4       0                        -        
+  ETH       5       0                        -        
+  ETH       6       0                        -        
+  ETH       7       0                        -        
+  ETH       8       0                        -        
+  IPHOST    1       0                        -
+  -----------------------------------------------------------------------------
+  Port-type  Port-ID    IGMP-mode         IGMP-VLAN  IGMP-PRI  Max-MAC-Count
+  -----------------------------------------------------------------------------
+  ETH              1    -                         -         -      Unlimited
+  ETH              2    -                         -         -      Unlimited
+  ETH              3    -                         -         -      Unlimited
+  ETH              4    -                         -         -      Unlimited
+  ETH              5    -                         -         -      Unlimited
+  ETH              6    -                         -         -      Unlimited
+  ETH              7    -                         -         -      Unlimited
+  ETH              8    -                         -         -      Unlimited
+  -----------------------------------------------------------------------------
+  Port-type Port-ID   Traffic-suppress   Traffic-suppress   Traffic-suppress
+                      unicast(kbps)      multicast(kpbs)    broadcast(kbps)
+  -----------------------------------------------------------------------------
+  ETH             1   -                  -                  -               
+  ETH             2   -                  -                  -               
+  ETH             3   -                  -                  -               
+  ETH             4   -                  -                  -               
+  ETH             5   -                  -                  -               
+  ETH             6   -                  -                  -               
+  ETH             7   -                  -                  -               
+  ETH             8   -                  -                  -               
+  -----------------------------------------------------------------------------
+  Alarm policy profile ID      : 0   
+  Alarm policy profile name    : alarm-policy_0
+  -----------------------------------------------------------------------------
+  -----------------------------------------------------------------------------
+  The number of required ONTs     : 1
+  -----------------------------------------------------------------------------
+
+MA5680T(config)#

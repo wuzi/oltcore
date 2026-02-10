@@ -5,7 +5,7 @@ use oltcore::{parse_ont_autofind, parse_ont_info, parse_service_ports, Fsp, Serv
 fn parse_ont_autofind_fixture() {
     let output = include_str!("fixtures/ont_autofind.txt");
     let entries = parse_ont_autofind(output);
-    assert_eq!(entries.len(), 2);
+    assert_eq!(entries.len(), 3);
     assert_eq!(entries[0].number, 1);
     assert_eq!(
         entries[0].fsp,
@@ -15,18 +15,31 @@ fn parse_ont_autofind_fixture() {
             port: 1
         }
     );
-    assert_eq!(entries[0].serial_number, "4444");
-    assert_eq!(entries[0].serial_number_readable, "DD72-ABCD");
+    assert_eq!(entries[0].serial_number, "44443732E68F3DD5");
+    assert_eq!(entries[0].serial_number_readable, "DD72-E68F3DD5");
+    assert_eq!(entries[0].password, "0x31323334353637380000(12345678)");
     assert_eq!(entries[1].number, 2);
     assert_eq!(
         entries[1].fsp,
         Fsp {
             frame: 0,
             slot: 6,
-            port: 2
+            port: 5
         }
     );
-    assert_eq!(entries[1].serial_number, "5555");
+    assert_eq!(entries[1].serial_number, "44443136E601C966");
+    assert_eq!(entries[1].serial_number_readable, "DD16-E601C966");
+    assert_eq!(entries[2].number, 3);
+    assert_eq!(
+        entries[2].fsp,
+        Fsp {
+            frame: 0,
+            slot: 6,
+            port: 11
+        }
+    );
+    assert_eq!(entries[2].serial_number, "48575443B6113C9D");
+    assert_eq!(entries[2].serial_number_readable, "HWTC-B6113C9D");
 }
 
 #[test]
@@ -37,24 +50,29 @@ fn parse_ont_info_fixture() {
         info.fsp,
         Fsp {
             frame: 0,
-            slot: 2,
-            port: 3
+            slot: 9,
+            port: 2
         }
     );
-    assert_eq!(info.id, 42);
+    assert_eq!(info.id, 0);
     assert_eq!(info.run_state, "online");
-    assert_eq!(info.temperature, 45);
-    assert_eq!(info.sn_readable, "ABCD-1234");
+    assert_eq!(info.temperature, 54);
+    assert_eq!(info.sn, "48575443CB8FBDB4");
+    assert_eq!(info.sn_readable, "HWTC-CB8FBDB4");
+    assert_eq!(info.description, "JFTECH");
+    assert_eq!(info.control_flag, "active");
+    assert_eq!(info.config_state, "normal");
+    assert_eq!(info.match_state, "match");
 }
 
 #[test]
 fn parse_optical_info_fixture() {
     let output = include_str!("fixtures/optical_info.txt");
     let info = parse_optical_info(output).expect("expected optical info");
-    assert_eq!(info.onu_nni_port_id, "1/1/1");
-    assert_eq!(info.vendor_name, "VendorX");
-    assert_eq!(info.rx_optical_power, "-12.3");
-    assert_eq!(info.tx_optical_power, "2.1");
+    assert_eq!(info.onu_nni_port_id, "0");
+    assert_eq!(info.vendor_name, "HUAWEI");
+    assert_eq!(info.rx_optical_power, "-15.93");
+    assert_eq!(info.tx_optical_power, "2.34");
 }
 
 #[test]
@@ -63,16 +81,10 @@ fn parse_service_ports_fixture() {
     let ports = parse_service_ports(output);
     assert_eq!(
         ports,
-        vec![
-            ServicePort {
-                index: 1234,
-                vlan: 100
-            },
-            ServicePort {
-                index: 5678,
-                vlan: 200
-            },
-        ]
+        vec![ServicePort {
+            index: 68,
+            vlan: 1063
+        },]
     );
 }
 

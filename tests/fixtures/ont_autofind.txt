@@ -1,17 +1,48 @@
-Number              : 1
-F/S/P               : 0/6/1
-Ont SN              : 4444 (DD72-ABCD)
-Password            : pass1
-Loid                : loid1
-Checkcode           : check1
-VendorID            : VEND
-Ont Version         : V1
-Ont SoftwareVersion : SV1
-Ont EquipmentID     : EQ1
-Ont Customized Info : CUST1
-Ont autofind time   : 2024-01-01 00:00:00
+MA5800-X7(config)#display ont autofind all 
+{ <cr>||<K> }: 
 
-Number              : 2
-F/S/P               : 0/6/2
-Ont SN              : 5555
-Password            : pass2
+  Command:
+          display ont autofind all 
+   ----------------------------------------------------------------------------
+   Number              : 1
+   F/S/P               : 0/6/1
+   Ont SN              : 44443732E68F3DD5 (DD72-E68F3DD5)
+   Password            : 0x31323334353637380000(12345678)
+   Loid                : e0e8e68f3dd6
+   Checkcode           : e0e8e68f3dd6
+   VendorID            : xPON
+   Ont Version         : HZ670.2A
+   Ont SoftwareVersion : V3.0.6
+   Ont EquipmentID     : M10G
+   Ont Customized Info : -
+   Ont autofind time   : 2026-02-10 14:19:36+08:00
+   ----------------------------------------------------------------------------
+   Number              : 2
+   F/S/P               : 0/6/5
+   Ont SN              : 44443136E601C966 (DD16-E601C966)
+   Password            : 0x31323334353637380000(12345678)
+   Loid                : e0e8e601c966
+   Checkcode           : e0e8e601c966
+   VendorID            : ZTEG
+   Ont Version         : HZ660.2A
+   Ont SoftwareVersion : V2.1.3
+   Ont EquipmentID     : F601        
+   Ont Customized Info : -           
+   Ont autofind time   : 2026-01-09 18:29:01+08:00
+   ----------------------------------------------------------------------------
+   Number              : 3           
+   F/S/P               : 0/6/11      
+   Ont SN              : 48575443B6113C9D (HWTC-B6113C9D)
+   Password            : 0x00000000000000000000
+   Loid                :             
+   Checkcode           :             
+   VendorID            : HWTC        
+   Ont Version         : 14ED.A      
+   Ont SoftwareVersion : V5R019C00S050
+   Ont EquipmentID     : HS8546V5    
+   Ont Customized Info : COMMON      
+   Ont autofind time   : 2026-02-09 16:27:27+08:00
+   ----------------------------------------------------------------------------
+   The number of GPON autofind ONT is 3
+
+MA5800-X7(config)#

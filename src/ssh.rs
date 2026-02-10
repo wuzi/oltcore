@@ -219,11 +219,6 @@ impl Connection {
 
         let output = self.execute_command("display ont autofind all", "(config)#")?;
         let entries = parse_ont_autofind(&output);
-        if entries.is_empty() && std::env::var("OLTCORE_DEBUG_OUTPUT").ok().as_deref() == Some("1")
-        {
-            let escaped = output.escape_default().to_string();
-            eprintln!("OLTCORE_DEBUG_OUTPUT: empty parse for display ont autofind all\n{escaped}");
-        }
         Ok(entries)
     }
 

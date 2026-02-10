@@ -21,7 +21,7 @@ proptest! {
     fn service_ports_roundtrip(entries in proptest::collection::vec((1u32..100000u32, 1u32..4094u32), 0..10)) {
         let mut output = String::new();
         for (index, vlan) in &entries {
-            output.push_str(&format!("  {:4}  {:4}  gpon  0/4/0  1  20  100  translate  inbound  10  10  flow\n", index, vlan));
+            output.push_str(&format!("     {:4} {:4} common   gpon 0/9 /2  0    20    vlan  20         10   10   up\n", index, vlan));
         }
         let ports = parse_service_ports(&output);
         let expected: Vec<ServicePort> = entries

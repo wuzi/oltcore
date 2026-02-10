@@ -369,10 +369,9 @@ pub fn parse_service_ports(output: &str) -> Vec<ServicePort> {
     }
 
     // Regex to match service port lines
-    // Example: "  1234  100  gpon  0/4/0  1  20  100  translate  inbound  10  10  flow"
-    let Ok(re) = Regex::new(
-        r"\s+(\d+)\s+(\d+)\s+\w+\s+\d+/\d+/\d+\s+\d+\s+\d+\s+\d+\s+\w+\s+\w+\s+\d+\s+\d+\s+\w+",
-    ) else {
+    // Example real output: "     68 1063 common   gpon 0/9 /2  0    20    vlan  20         10   10   up"
+    // Captures: INDEX (68), VLAN ID (1063)
+    let Ok(re) = Regex::new(r"(?m)^\s+(\d+)\s+(\d+)\s+\w+\s+gpon") else {
         return ports;
     };
 
@@ -567,21 +566,21 @@ mod tests {
 
     #[test]
     fn parse_service_ports_parses_entries() {
-        let output = "  1234  100  gpon  0/4/0  1  20  100  translate  inbound  10  10  flow\n  5678  200  gpon  0/4/1  1  20  200  translate  inbound  10  10  flow\n";
+        let output = "     68 1063 common   gpon 0/9 /2  0    20    vlan  20         10   10   up\n     69 1064 common   gpon 0/9 /3  0    20    vlan  20         10   10   up\n";
         let ports = parse_service_ports(output);
         assert_eq!(ports.len(), 2);
         assert_eq!(
             ports[0],
             ServicePort {
-                index: 1234,
-                vlan: 100
+                index: 68,
+                vlan: 1063
             }
         );
         assert_eq!(
             ports[1],
             ServicePort {
-                index: 5678,
-                vlan: 200
+                index: 69,
+                vlan: 1064
             }
         );
     }
