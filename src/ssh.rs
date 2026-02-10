@@ -39,7 +39,7 @@ impl SessionContext {
 }
 
 pub struct ServicePortConfig {
-    pub vlan: u32,
+    pub vlan: i32,
     pub fsp: Fsp,
     pub ont_id: u32,
     pub gemport: u32,
