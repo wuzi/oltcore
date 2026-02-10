@@ -1,0 +1,24 @@
+F/S/P: 0/2/3
+ONT-ID: 42
+Control flag: active
+Run state: online
+Config state: normal
+Match state: match
+DBA type: DBA1
+ONT distance(m): 120
+ONT last distance(m): 115
+Memory occupation: 15%
+CPU occupation: 5%
+Temperature: 45(C)
+Authentic type: sn
+SN: 1234 (ABCD-1234)
+Management mode: OMCI
+Description: test ont
+Last down cause: loss
+Last up time: 2024-01-01 00:00:00
+Last down time: 2024-01-01 01:00:00
+ONT online duration: 1h
+Line profile ID: 10
+Line profile name: line10
+Service profile ID: 20
+Service profile name: svc20

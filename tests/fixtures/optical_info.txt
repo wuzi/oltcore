@@ -1,0 +1,29 @@
+ONU NNI port ID: 1/1/1
+Module type: SFP
+Module sub-type: GPON
+Used type: GPON
+Encapsulation Type: 802.1Q
+Optical power precision(dBm): 0.1
+Vendor name: VendorX
+Vendor rev: A1
+Vendor PN: PN123
+Vendor SN: SN123
+Date Code: 20240101
+Rx optical power(dBm): -12.3
+Rx power current warning threshold(dBm): -25.0
+Rx power current alarm threshold(dBm): -27.0
+Tx optical power(dBm): 2.1
+Tx power current warning threshold(dBm): 1.0
+Tx power current alarm threshold(dBm): 0.5
+Laser bias current(mA): 5.5
+Tx bias current warning threshold(mA): 7.0
+Tx bias current alarm threshold(mA): 8.0
+Temperature(C): 40
+Temperature warning threshold(C): 70
+Temperature alarm threshold(C): 80
+Voltage(V): 3.3
+Supply voltage warning threshold(V): 3.1
+Supply voltage alarm threshold(V): 3.0
+OLT Rx ONT optical power(dBm): -20.0
+CATV Rx optical power(dBm): -10.0
+CATV Rx power alarm threshold(dBm): -15.0
