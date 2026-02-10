@@ -24,6 +24,22 @@ pub struct OntAutofindEntry {
     pub auto_find_time: String,
 }
 
+impl OntAutofindEntry {
+    #[must_use]
+    pub fn fsp(&self) -> Option<(u32, u32, u32)> {
+        let parts: Vec<&str> = self.fsp.split('/').collect();
+        if parts.len() != 3 {
+            return None;
+        }
+
+        let frame = parts[0].parse().ok()?;
+        let slot = parts[1].parse().ok()?;
+        let port = parts[2].parse().ok()?;
+
+        Some((frame, slot, port))
+    }
+}
+
 #[derive(Debug, Clone, Serialize, Deserialize, ToSchema)]
 pub struct OntInfo {
     /// Frame/Slot/Port
