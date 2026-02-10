@@ -1,14 +1,12 @@
 use serde::{Deserialize, Serialize};
 use utoipa::ToSchema;
 
-// TODO: make fsp a separate struct and implement parsing logic there, to make using it easier and less error-prone
-
 #[derive(Debug, Clone, Serialize, Deserialize, ToSchema)]
 pub struct OntAutofindEntry {
     /// ONT entry number
     pub number: u32,
     /// Frame/Slot/Port
-    pub fsp: String,
+    pub fsp: Fsp,
     /// ONT serial number (raw)
     pub serial_number: String,
     /// ONT serial number (human-readable format)
@@ -26,26 +24,10 @@ pub struct OntAutofindEntry {
     pub auto_find_time: String,
 }
 
-impl OntAutofindEntry {
-    #[must_use]
-    pub fn fsp(&self) -> Option<(u32, u32, u32)> {
-        let parts: Vec<&str> = self.fsp.split('/').collect();
-        if parts.len() != 3 {
-            return None;
-        }
-
-        let frame = parts[0].parse().ok()?;
-        let slot = parts[1].parse().ok()?;
-        let port = parts[2].parse().ok()?;
-
-        Some((frame, slot, port))
-    }
-}
-
 #[derive(Debug, Clone, Serialize, Deserialize, ToSchema)]
 pub struct OntInfo {
     /// Frame/Slot/Port
-    pub fsp: String,
+    pub fsp: Fsp,
     pub id: u32,
     pub control_flag: String,
     pub run_state: String,
@@ -77,32 +59,6 @@ pub struct OntInfo {
     pub line_profile_name: String,
     pub service_profile_id: u32,
     pub service_profile_name: String,
-}
-
-impl OntInfo {
-    #[must_use]
-    pub fn port(&self) -> Option<u32> {
-        let parts: Vec<&str> = self.fsp.split('/').collect();
-        if parts.len() != 3 {
-            return None;
-        }
-
-        parts[2].parse().ok()
-    }
-
-    #[must_use]
-    pub fn fsp(&self) -> Option<Fsp> {
-        let parts: Vec<&str> = self.fsp.split('/').collect();
-        if parts.len() != 3 {
-            return None;
-        }
-
-        let frame = parts[0].parse().ok()?;
-        let slot = parts[1].parse().ok()?;
-        let port = parts[2].parse().ok()?;
-
-        Some(Fsp { frame, slot, port })
-    }
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize, ToSchema)]
@@ -138,14 +94,14 @@ pub struct OpticalInfo {
     pub catv_rx_power_alarm_threshold: String,
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize, ToSchema)]
+#[derive(Debug, Clone, Serialize, Deserialize, ToSchema, PartialEq, Eq)]
 pub struct ServicePort {
     pub index: u32,
     pub vlan: u32,
 }
 
 /// Frame/Slot/Port representation
-#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+#[derive(Debug, Clone, Copy, Serialize, Deserialize, ToSchema, PartialEq, Eq, Default)]
 pub struct Fsp {
     pub frame: u32,
     pub slot: u32,

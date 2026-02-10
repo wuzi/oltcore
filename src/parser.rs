@@ -1,4 +1,7 @@
-use crate::models::{OntAutofindEntry, OntInfo, OpticalInfo, ServicePort};
+use crate::{
+    models::{OntAutofindEntry, OntInfo, OpticalInfo, ServicePort},
+    Fsp,
+};
 use regex::Regex;
 
 #[must_use]
@@ -29,7 +32,7 @@ pub fn parse_ont_autofind(output: &str) -> Vec<OntAutofindEntry> {
 
             let mut entry = OntAutofindEntry {
                 number: 0,
-                fsp: String::new(),
+                fsp: Fsp::default(),
                 serial_number: String::new(),
                 serial_number_readable: String::new(),
                 password: String::new(),
@@ -52,7 +55,11 @@ pub fn parse_ont_autofind(output: &str) -> Vec<OntAutofindEntry> {
         };
 
         match key {
-            "F/S/P" => entry.fsp = value.to_string(),
+            "F/S/P" => {
+                if let Some(fsp) = Fsp::parse(value) {
+                    entry.fsp = fsp;
+                }
+            }
             "Ont SN" => {
                 if let Some((sn, readable)) = value.split_once('(') {
                     entry.serial_number = sn.trim().to_string();
@@ -90,7 +97,7 @@ pub fn parse_ont_info(output: &str) -> Option<OntInfo> {
     }
 
     let mut info = OntInfo {
-        fsp: String::new(),
+        fsp: Fsp::default(),
         id: 0,
         control_flag: String::new(),
         run_state: String::new(),
@@ -117,6 +124,8 @@ pub fn parse_ont_info(output: &str) -> Option<OntInfo> {
         service_profile_name: String::new(),
     };
 
+    let mut found_data = false;
+
     for line in output.lines() {
         let line = line.trim();
         if let Some((key, value)) = line.split_once(':') {
@@ -124,23 +133,60 @@ pub fn parse_ont_info(output: &str) -> Option<OntInfo> {
             let value = value.trim();
 
             match key {
-                "F/S/P" => info.fsp = value.to_string(),
-                "ONT-ID" => info.id = value.parse().unwrap_or(0),
-                "Control flag" => info.control_flag = value.to_string(),
-                "Run state" => info.run_state = value.to_string(),
-                "Config state" => info.config_state = value.to_string(),
-                "Match state" => info.match_state = value.to_string(),
-                "DBA type" => info.dba_type = value.to_string(),
-                "ONT distance(m)" => info.distance = value.parse().unwrap_or(0),
-                "ONT last distance(m)" => info.last_distance = value.parse().unwrap_or(0),
-                "Memory occupation" => info.memory_occupation = value.to_string(),
-                "CPU occupation" => info.cpu_occupation = value.to_string(),
+                "F/S/P" => {
+                    info.fsp = Fsp::parse(value)?;
+                    found_data = true;
+                }
+                "ONT-ID" => {
+                    info.id = value.parse().unwrap_or(0);
+                    found_data = true;
+                }
+                "Control flag" => {
+                    info.control_flag = value.to_string();
+                    found_data = true;
+                }
+                "Run state" => {
+                    info.run_state = value.to_string();
+                    found_data = true;
+                }
+                "Config state" => {
+                    info.config_state = value.to_string();
+                    found_data = true;
+                }
+                "Match state" => {
+                    info.match_state = value.to_string();
+                    found_data = true;
+                }
+                "DBA type" => {
+                    info.dba_type = value.to_string();
+                    found_data = true;
+                }
+                "ONT distance(m)" => {
+                    info.distance = value.parse().unwrap_or(0);
+                    found_data = true;
+                }
+                "ONT last distance(m)" => {
+                    info.last_distance = value.parse().unwrap_or(0);
+                    found_data = true;
+                }
+                "Memory occupation" => {
+                    info.memory_occupation = value.to_string();
+                    found_data = true;
+                }
+                "CPU occupation" => {
+                    info.cpu_occupation = value.to_string();
+                    found_data = true;
+                }
                 "Temperature" => {
                     if let Some(temp) = value.split('(').next() {
                         info.temperature = temp.trim().parse().unwrap_or(0);
                     }
+                    found_data = true;
                 }
-                "Authentic type" => info.authentic_type = value.to_string(),
+                "Authentic type" => {
+                    info.authentic_type = value.to_string();
+                    found_data = true;
+                }
                 "SN" => {
                     if let Some((sn, readable)) = value.split_once('(') {
                         info.sn = sn.trim().to_string();
@@ -148,26 +194,57 @@ pub fn parse_ont_info(output: &str) -> Option<OntInfo> {
                     } else {
                         info.sn = value.to_string();
                     }
+                    found_data = true;
                 }
-                "Management mode" => info.management_mode = value.to_string(),
-                "Description" => info.description = value.to_string(),
-                "Last down cause" => info.last_down_cause = value.to_string(),
-                "Last up time" => info.last_up_time = value.to_string(),
-                "Last down time" => info.last_down_time = value.to_string(),
-                "ONT online duration" => info.online_duration = value.to_string(),
-                "Line profile ID" => info.line_profile_id = value.parse().unwrap_or(0),
-                "Line profile name" => info.line_profile_name = value.to_string(),
-                "Service profile ID" => info.service_profile_id = value.parse().unwrap_or(0),
-                "Service profile name" => info.service_profile_name = value.to_string(),
+                "Management mode" => {
+                    info.management_mode = value.to_string();
+                    found_data = true;
+                }
+                "Description" => {
+                    info.description = value.to_string();
+                    found_data = true;
+                }
+                "Last down cause" => {
+                    info.last_down_cause = value.to_string();
+                    found_data = true;
+                }
+                "Last up time" => {
+                    info.last_up_time = value.to_string();
+                    found_data = true;
+                }
+                "Last down time" => {
+                    info.last_down_time = value.to_string();
+                    found_data = true;
+                }
+                "ONT online duration" => {
+                    info.online_duration = value.to_string();
+                    found_data = true;
+                }
+                "Line profile ID" => {
+                    info.line_profile_id = value.parse().unwrap_or(0);
+                    found_data = true;
+                }
+                "Line profile name" => {
+                    info.line_profile_name = value.to_string();
+                    found_data = true;
+                }
+                "Service profile ID" => {
+                    info.service_profile_id = value.parse().unwrap_or(0);
+                    found_data = true;
+                }
+                "Service profile name" => {
+                    info.service_profile_name = value.to_string();
+                    found_data = true;
+                }
                 _ => {}
             }
         }
     }
 
-    if info.fsp.is_empty() {
-        None
-    } else {
+    if found_data {
         Some(info)
+    } else {
+        None
     }
 }
 
@@ -363,7 +440,199 @@ mod tests {
         let entries = parse_ont_autofind(output);
         assert_eq!(entries.len(), 1);
         assert_eq!(entries[0].number, 1);
-        assert_eq!(entries[0].fsp, "0/6/1");
+        assert_eq!(
+            entries[0].fsp,
+            Fsp {
+                frame: 0,
+                slot: 6,
+                port: 1
+            }
+        );
         assert_eq!(entries[0].serial_number_readable, "DD72-ABCD");
+    }
+
+    #[test]
+    fn parse_ont_autofind_multiple_entries() {
+        let output = "Number: 1\nF/S/P: 0/1/2\nOnt SN: ABCD (ABCD-1234)\nPassword: pass1\n\nNumber: 2\nF/S/P: 0/1/3\nOnt SN: EFGH\n";
+        let entries = parse_ont_autofind(output);
+        assert_eq!(entries.len(), 2);
+        assert_eq!(entries[0].number, 1);
+        assert_eq!(
+            entries[0].fsp,
+            Fsp {
+                frame: 0,
+                slot: 1,
+                port: 2
+            }
+        );
+        assert_eq!(entries[0].serial_number, "ABCD");
+        assert_eq!(entries[0].serial_number_readable, "ABCD-1234");
+        assert_eq!(entries[0].password, "pass1");
+        assert_eq!(entries[1].number, 2);
+        assert_eq!(
+            entries[1].fsp,
+            Fsp {
+                frame: 0,
+                slot: 1,
+                port: 3
+            }
+        );
+        assert_eq!(entries[1].serial_number, "EFGH");
+        assert_eq!(entries[1].serial_number_readable, "");
+    }
+
+    #[test]
+    fn parse_ont_autofind_skips_zero_number() {
+        let output = "Number: 0\nF/S/P: 0/1/2\nOnt SN: ABCD\n";
+        let entries = parse_ont_autofind(output);
+        assert!(entries.is_empty());
+    }
+
+    #[test]
+    fn parse_ont_autofind_invalid_fsp_keeps_default() {
+        let output = "Number: 1\nF/S/P: invalid\nOnt SN: ABCD\n";
+        let entries = parse_ont_autofind(output);
+        assert_eq!(entries.len(), 1);
+        assert_eq!(entries[0].fsp, Fsp::default());
+        assert_eq!(entries[0].serial_number, "ABCD");
+    }
+
+    #[test]
+    fn parse_ont_info_full() {
+        let output = "F/S/P: 0/2/3\nONT-ID: 42\nControl flag: active\nRun state: online\nConfig state: normal\nMatch state: match\nDBA type: DBA1\nONT distance(m): 120\nONT last distance(m): 115\nMemory occupation: 15%\nCPU occupation: 5%\nTemperature: 45(C)\nAuthentic type: sn\nSN: 1234 (ABCD-1234)\nManagement mode: OMCI\nDescription: test ont\nLast down cause: loss\nLast up time: 2024-01-01 00:00:00\nLast down time: 2024-01-01 01:00:00\nONT online duration: 1h\nLine profile ID: 10\nLine profile name: line10\nService profile ID: 20\nService profile name: svc20\n";
+        let info = parse_ont_info(output).expect("expected info");
+        assert_eq!(
+            info.fsp,
+            Fsp {
+                frame: 0,
+                slot: 2,
+                port: 3
+            }
+        );
+        assert_eq!(info.id, 42);
+        assert_eq!(info.control_flag, "active");
+        assert_eq!(info.run_state, "online");
+        assert_eq!(info.config_state, "normal");
+        assert_eq!(info.match_state, "match");
+        assert_eq!(info.dba_type, "DBA1");
+        assert_eq!(info.distance, 120);
+        assert_eq!(info.last_distance, 115);
+        assert_eq!(info.memory_occupation, "15%");
+        assert_eq!(info.cpu_occupation, "5%");
+        assert_eq!(info.temperature, 45);
+        assert_eq!(info.authentic_type, "sn");
+        assert_eq!(info.sn, "1234");
+        assert_eq!(info.sn_readable, "ABCD-1234");
+        assert_eq!(info.management_mode, "OMCI");
+        assert_eq!(info.description, "test ont");
+        assert_eq!(info.last_down_cause, "loss");
+        assert_eq!(info.last_up_time, "2024-01-01 00:00:00");
+        assert_eq!(info.last_down_time, "2024-01-01 01:00:00");
+        assert_eq!(info.online_duration, "1h");
+        assert_eq!(info.line_profile_id, 10);
+        assert_eq!(info.line_profile_name, "line10");
+        assert_eq!(info.service_profile_id, 20);
+        assert_eq!(info.service_profile_name, "svc20");
+    }
+
+    #[test]
+    fn parse_ont_info_unknown_only_returns_none() {
+        let output = "Foo: bar\nBaz: qux\n";
+        let info = parse_ont_info(output);
+        assert!(info.is_none());
+    }
+
+    #[test]
+    fn parse_ont_info_invalid_fsp_returns_none() {
+        let output = "F/S/P: invalid\nONT-ID: 1\n";
+        let info = parse_ont_info(output);
+        assert!(info.is_none());
+    }
+
+    #[test]
+    fn parse_optical_info_empty() {
+        let output = "";
+        let info = parse_optical_info(output);
+        assert!(info.is_none());
+    }
+
+    #[test]
+    fn parse_optical_info_minimal() {
+        let output = "ONU NNI port ID: 1/1/1\nVendor name: VendorX\nRx optical power(dBm): -12.3\n";
+        let info = parse_optical_info(output).expect("expected optical info");
+        assert_eq!(info.onu_nni_port_id, "1/1/1");
+        assert_eq!(info.vendor_name, "VendorX");
+        assert_eq!(info.rx_optical_power, "-12.3");
+    }
+
+    #[test]
+    fn parse_service_ports_parses_entries() {
+        let output = "  1234  100  gpon  0/4/0  1  20  100  translate  inbound  10  10  flow\n  5678  200  gpon  0/4/1  1  20  200  translate  inbound  10  10  flow\n";
+        let ports = parse_service_ports(output);
+        assert_eq!(ports.len(), 2);
+        assert_eq!(
+            ports[0],
+            ServicePort {
+                index: 1234,
+                vlan: 100
+            }
+        );
+        assert_eq!(
+            ports[1],
+            ServicePort {
+                index: 5678,
+                vlan: 200
+            }
+        );
+    }
+
+    #[test]
+    fn parse_service_ports_failure_is_empty() {
+        let output = "Failure: No service virtual port can be operated\n  1234  100  gpon  0/4/0  1  20  100  translate  inbound  10  10  flow\n";
+        let ports = parse_service_ports(output);
+        assert!(ports.is_empty());
+    }
+
+    #[test]
+    fn extract_ont_id_parses_value() {
+        let output = "ONTID :123\n";
+        let id = extract_ont_id(output);
+        assert_eq!(id, Some(123));
+    }
+
+    #[test]
+    fn extract_ont_id_missing_returns_none() {
+        let output = "ONT-ID: 1\n";
+        let id = extract_ont_id(output);
+        assert!(id.is_none());
+    }
+
+    #[test]
+    fn check_for_failure_ok() {
+        let output = "OK\n";
+        let result = check_for_failure(output);
+        assert!(result.is_ok());
+    }
+
+    #[test]
+    fn check_for_failure_command_failed() {
+        let output = "Failure: device busy\n";
+        let result = check_for_failure(output);
+        match result {
+            Err(crate::error::Error::CommandFailed(msg)) => {
+                assert_eq!(msg, "device busy");
+            }
+            _ => panic!("expected command failed error"),
+        }
+    }
+
+    #[test]
+    fn check_for_failure_invalid_serial() {
+        let output = "Parameter error\n";
+        let result = check_for_failure(output);
+        match result {
+            Err(crate::error::Error::InvalidSerialNumber) => {}
+            _ => panic!("expected invalid serial number error"),
+        }
     }
 }
