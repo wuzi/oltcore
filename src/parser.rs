@@ -364,7 +364,7 @@ pub fn parse_optical_info(output: &str) -> Option<OpticalInfo> {
 pub fn parse_service_ports(output: &str) -> Vec<ServicePort> {
     let mut ports = Vec::new();
 
-    if output.contains("Failure: No service virtual port can be operated") {
+    if output.contains("No service virtual port can be operated") {
         return ports;
     }
 
