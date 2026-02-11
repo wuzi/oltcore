@@ -359,13 +359,9 @@ impl Connection {
             .ok_or_else(|| Error::InvalidContext("Slot not set in context".to_string()))?;
 
         let cmd = format!("ont delete {port} all");
-        let output = self.execute_command(&cmd, "(y/n)[n]:")?;
-
-        check_for_failure(&output)?;
-
         let prompt = format!("(config-if-gpon-{frame}/{slot})#");
-        self.execute_command("y", &prompt)?;
-
+        let output = self.execute_command(&cmd, &prompt)?;
+        check_for_failure(&output)?;
         Ok(())
     }
 
