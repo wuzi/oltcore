@@ -397,7 +397,9 @@ pub fn extract_ont_id(output: &str) -> Option<u32> {
 pub fn check_for_failure(output: &str) -> crate::error::Result<()> {
     for line in output.lines() {
         let line = line.trim();
-        if line.starts_with("Failure: ") {
+        if line.starts_with("Failure: ")
+            && !line.contains("No service virtual port can be operated")
+        {
             let msg = line.trim_start_matches("Failure: ");
             return Err(crate::error::Error::CommandFailed(msg.to_string()));
         }
