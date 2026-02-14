@@ -222,18 +222,18 @@ fn upsert_ont<'a>(
     ont_order: &mut Vec<u32>,
     id: u32,
 ) -> &'a mut OntInfoSummaryOnt {
-    if !ont_map.contains_key(&id) {
-        ont_map.insert(
+    if let std::collections::hash_map::Entry::Vacant(e) = ont_map.entry(id) {
+        e.insert(OntInfoSummaryOnt {
             id,
-            OntInfoSummaryOnt {
-                id,
-                ..OntInfoSummaryOnt::default()
-            },
-        );
+            ..OntInfoSummaryOnt::default()
+        });
         ont_order.push(id);
     }
 
-    ont_map.get_mut(&id).expect("ONT entry must exist")
+    ont_map.entry(id).or_insert_with(|| OntInfoSummaryOnt {
+        id,
+        ..OntInfoSummaryOnt::default()
+    })
 }
 
 fn finalize_port(mut builder: PortBuilder) -> OntInfoSummaryPort {
