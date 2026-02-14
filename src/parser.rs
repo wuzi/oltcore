@@ -620,12 +620,12 @@ mod tests {
     #[test]
     fn check_for_failure_command_failed() {
         let output = "Failure: device busy\n";
-        check_for_failure(output).unwrap();
+        assert!(check_for_failure(output).is_err());
     }
 
     #[test]
     fn check_for_failure_invalid_serial() {
         let output = "Parameter error\n";
-        check_for_failure(output).unwrap();
+        assert!(check_for_failure(output).is_err());
     }
 }

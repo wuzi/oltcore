@@ -4,6 +4,7 @@ use std::net::TcpStream;
 
 use crate::error::{Error, Result};
 use crate::models::{Fsp, OntInfo, OpticalInfo, ServicePort};
+use crate::ont_info_summary::{parse_ont_info_summary, OntInfoSummary};
 use crate::parser::{
     check_for_failure, extract_ont_id, parse_ont_autofind, parse_ont_info, parse_optical_info,
     parse_service_ports,
@@ -260,6 +261,17 @@ impl Connection {
         }
 
         Ok(parse_ont_info(&output))
+    }
+
+    pub fn display_ont_info_summary(&mut self, frame: u32) -> Result<OntInfoSummary> {
+        if self.context.level != SessionLevel::Config {
+            return Err(Error::InvalidContext("Must be in config mode".to_string()));
+        }
+
+        let cmd = format!("display ont info summary {frame}");
+        let output = self.execute_command(&cmd, "(config)#")?;
+
+        Ok(parse_ont_info_summary(&output))
     }
 
     pub fn display_ont_optical_info(
