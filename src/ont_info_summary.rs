@@ -1,6 +1,7 @@
 use crate::models::Fsp;
 use regex::Regex;
 use serde::{Deserialize, Serialize};
+use std::collections::HashMap;
 use utoipa::ToSchema;
 
 #[derive(Debug, Clone, Serialize, Deserialize, ToSchema, Default)]
@@ -13,22 +14,16 @@ pub struct OntInfoSummaryPort {
     pub fsp: Fsp,
     pub total_onts: u32,
     pub online_onts: u32,
-    pub states: Vec<OntInfoSummaryState>,
     pub onts: Vec<OntInfoSummaryOnt>,
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize, ToSchema)]
-pub struct OntInfoSummaryState {
+#[derive(Debug, Clone, Serialize, Deserialize, ToSchema, Default)]
+pub struct OntInfoSummaryOnt {
     pub id: u32,
     pub run_state: String,
     pub last_up_time: String,
     pub last_down_time: String,
     pub last_down_cause: String,
-}
-
-#[derive(Debug, Clone, Serialize, Deserialize, ToSchema)]
-pub struct OntInfoSummaryOnt {
-    pub id: u32,
     pub sn: String,
     pub ont_type: String,
     pub distance_m: Option<u32>,
@@ -44,6 +39,12 @@ enum SummarySection {
     Details,
 }
 
+struct PortBuilder {
+    port: OntInfoSummaryPort,
+    ont_map: HashMap<u32, OntInfoSummaryOnt>,
+    ont_order: Vec<u32>,
+}
+
 #[must_use]
 pub fn parse_ont_info_summary(output: &str) -> OntInfoSummary {
     let Ok(port_re) =
@@ -53,7 +54,7 @@ pub fn parse_ont_info_summary(output: &str) -> OntInfoSummary {
     };
 
     let mut summary = OntInfoSummary::default();
-    let mut current_port: Option<OntInfoSummaryPort> = None;
+    let mut current_port: Option<PortBuilder> = None;
     let mut section = SummarySection::None;
 
     let cleaned = output.replace('\r', "\n");
@@ -65,7 +66,7 @@ pub fn parse_ont_info_summary(output: &str) -> OntInfoSummary {
 
         if let Some(caps) = port_re.captures(line) {
             if let Some(port) = current_port.take() {
-                summary.ports.push(port);
+                summary.ports.push(finalize_port(port));
             }
 
             let fsp = caps
@@ -81,12 +82,15 @@ pub fn parse_ont_info_summary(output: &str) -> OntInfoSummary {
                 .and_then(|m| m.as_str().parse().ok())
                 .unwrap_or(0);
 
-            current_port = Some(OntInfoSummaryPort {
-                fsp,
-                total_onts,
-                online_onts,
-                states: Vec::new(),
-                onts: Vec::new(),
+            current_port = Some(PortBuilder {
+                port: OntInfoSummaryPort {
+                    fsp,
+                    total_onts,
+                    online_onts,
+                    onts: Vec::new(),
+                },
+                ont_map: HashMap::new(),
+                ont_order: Vec::new(),
             });
             section = SummarySection::None;
             continue;
@@ -113,12 +117,22 @@ pub fn parse_ont_info_summary(output: &str) -> OntInfoSummary {
         match section {
             SummarySection::States => {
                 if let Some(state) = parse_state_line(line) {
-                    port.states.push(state);
+                    let entry = upsert_ont(&mut port.ont_map, &mut port.ont_order, state.id);
+                    entry.run_state = state.run_state;
+                    entry.last_up_time = state.last_up_time;
+                    entry.last_down_time = state.last_down_time;
+                    entry.last_down_cause = state.last_down_cause;
                 }
             }
             SummarySection::Details => {
                 if let Some(ont) = parse_ont_line(line) {
-                    port.onts.push(ont);
+                    let entry = upsert_ont(&mut port.ont_map, &mut port.ont_order, ont.id);
+                    entry.sn = ont.sn;
+                    entry.ont_type = ont.ont_type;
+                    entry.distance_m = ont.distance_m;
+                    entry.rx_power = ont.rx_power;
+                    entry.tx_power = ont.tx_power;
+                    entry.description = ont.description;
                 }
             }
             SummarySection::None => {}
@@ -126,13 +140,31 @@ pub fn parse_ont_info_summary(output: &str) -> OntInfoSummary {
     }
 
     if let Some(port) = current_port.take() {
-        summary.ports.push(port);
+        summary.ports.push(finalize_port(port));
     }
 
     summary
 }
 
-fn parse_state_line(line: &str) -> Option<OntInfoSummaryState> {
+struct StateFields {
+    id: u32,
+    run_state: String,
+    last_up_time: String,
+    last_down_time: String,
+    last_down_cause: String,
+}
+
+struct OntFields {
+    id: u32,
+    sn: String,
+    ont_type: String,
+    distance_m: Option<u32>,
+    rx_power: Option<f32>,
+    tx_power: Option<f32>,
+    description: String,
+}
+
+fn parse_state_line(line: &str) -> Option<StateFields> {
     let parts: Vec<&str> = line.split_whitespace().collect();
     if parts.len() < 6 {
         return None;
@@ -148,7 +180,7 @@ fn parse_state_line(line: &str) -> Option<OntInfoSummaryState> {
         String::new()
     };
 
-    Some(OntInfoSummaryState {
+    Some(StateFields {
         id,
         run_state,
         last_up_time,
@@ -157,7 +189,7 @@ fn parse_state_line(line: &str) -> Option<OntInfoSummaryState> {
     })
 }
 
-fn parse_ont_line(line: &str) -> Option<OntInfoSummaryOnt> {
+fn parse_ont_line(line: &str) -> Option<OntFields> {
     let parts: Vec<&str> = line.split_whitespace().collect();
     if parts.len() < 6 {
         return None;
@@ -174,7 +206,7 @@ fn parse_ont_line(line: &str) -> Option<OntInfoSummaryOnt> {
         String::new()
     };
 
-    Some(OntInfoSummaryOnt {
+    Some(OntFields {
         id,
         sn,
         ont_type,
@@ -183,6 +215,35 @@ fn parse_ont_line(line: &str) -> Option<OntInfoSummaryOnt> {
         tx_power,
         description,
     })
+}
+
+fn upsert_ont<'a>(
+    ont_map: &'a mut HashMap<u32, OntInfoSummaryOnt>,
+    ont_order: &mut Vec<u32>,
+    id: u32,
+) -> &'a mut OntInfoSummaryOnt {
+    if !ont_map.contains_key(&id) {
+        ont_map.insert(
+            id,
+            OntInfoSummaryOnt {
+                id,
+                ..OntInfoSummaryOnt::default()
+            },
+        );
+        ont_order.push(id);
+    }
+
+    ont_map.get_mut(&id).expect("ONT entry must exist")
+}
+
+fn finalize_port(mut builder: PortBuilder) -> OntInfoSummaryPort {
+    let mut port = builder.port;
+    port.onts = builder
+        .ont_order
+        .into_iter()
+        .filter_map(|id| builder.ont_map.remove(&id))
+        .collect();
+    port
 }
 
 fn parse_optional_u32(value: &str) -> Option<u32> {

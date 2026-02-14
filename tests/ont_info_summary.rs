@@ -9,23 +9,26 @@ fn parse_ont_info_summary_fixture() {
     let port = summary
         .ports
         .iter()
-        .find(|p| p.fsp == Fsp {
-            frame: 0,
-            slot: 5,
-            port: 0,
+        .find(|p| {
+            p.fsp
+                == Fsp {
+                    frame: 0,
+                    slot: 5,
+                    port: 0,
+                }
         })
         .expect("expected port 0/5/0");
 
     assert_eq!(port.total_onts, 76);
     assert_eq!(port.online_onts, 72);
 
-    let state = port
-        .states
+    let ont = port
+        .onts
         .iter()
-        .find(|s| s.id == 23)
-        .expect("expected state for ONT 23");
-    assert_eq!(state.run_state, "online");
-    assert_eq!(state.last_down_cause, "LOFi");
+        .find(|o| o.id == 23)
+        .expect("expected ont 23 details");
+    assert_eq!(ont.run_state, "online");
+    assert_eq!(ont.last_down_cause, "LOFi");
 
     let ont = port
         .onts
@@ -57,10 +60,13 @@ fn parse_ont_info_summary_other_ports() {
     let port = summary
         .ports
         .iter()
-        .find(|p| p.fsp == Fsp {
-            frame: 0,
-            slot: 5,
-            port: 4,
+        .find(|p| {
+            p.fsp
+                == Fsp {
+                    frame: 0,
+                    slot: 5,
+                    port: 4,
+                }
         })
         .expect("expected port 0/5/4");
 
@@ -70,10 +76,13 @@ fn parse_ont_info_summary_other_ports() {
     let port = summary
         .ports
         .iter()
-        .find(|p| p.fsp == Fsp {
-            frame: 0,
-            slot: 5,
-            port: 1,
+        .find(|p| {
+            p.fsp
+                == Fsp {
+                    frame: 0,
+                    slot: 5,
+                    port: 1,
+                }
         })
         .expect("expected port 0/5/1");
 

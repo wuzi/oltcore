@@ -13,7 +13,6 @@ pub use error::{Error, Result};
 pub use models::{Fsp, OntAutofindEntry, OntInfo, OpticalInfo, ServicePort};
 pub use ont_info_summary::{
     parse_ont_info_summary, OntInfoSummary, OntInfoSummaryOnt, OntInfoSummaryPort,
-    OntInfoSummaryState,
 };
 pub use parser::{parse_ont_autofind, parse_ont_info, parse_optical_info, parse_service_ports};
 pub use r2d2::ConnectionManager;
