@@ -263,12 +263,17 @@ impl Connection {
         Ok(parse_ont_info(&output))
     }
 
-    pub fn display_ont_info_summary(&mut self, frame: u32) -> Result<OntInfoSummary> {
+    pub fn display_ont_info_summary(
+        &mut self,
+        frame: u32,
+        slot: u32,
+        port: u32,
+    ) -> Result<OntInfoSummary> {
         if self.context.level != SessionLevel::Config {
             return Err(Error::InvalidContext("Must be in config mode".to_string()));
         }
 
-        let cmd = format!("display ont info summary {frame}");
+        let cmd = format!("display ont info summary {frame}/{slot}/{port}");
         let output = self.execute_command(&cmd, "(config)#")?;
 
         Ok(parse_ont_info_summary(&output))
