@@ -1,0 +1,2693 @@
+MA5800-X7#display alarm active all detail 
+{ <cr>||<K> }: 
+
+  Command:
+          display alarm active all detail 
+  ALARM 2431665 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-14 22:48:13+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 23
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT
+  --- END
+
+  ALARM 2431654 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-14 22:40:14+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 0, ONT ID: 2
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT
+  --- END
+
+  ALARM 2431653 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2026-02-14 22:40:04+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 6, ONT ID: 67, Equipment ID: XX230v
+  DESCRIPTION : The ONT is power off
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END
+
+  ALARM 2431651 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-14 22:39:09+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 95
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT
+  --- END
+
+  ALARM 2431650 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-14 22:39:09+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 62
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT
+  --- END
+
+  ALARM 2431648 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-14 22:38:56+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 8, ONT ID: 62
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT
+  --- END
+
+  ALARM 2431647 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-14 22:38:37+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 82
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT
+  --- END
+
+  ALARM 2431646 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2026-02-14 22:37:35+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 2, ONT ID: 54, Equipment ID: F6201BV9.3.12
+  DESCRIPTION : The ONT is power off
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END
+
+  ALARM 2431632 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-14 22:23:49+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 102
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT
+  --- END
+
+  ALARM 2431621 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-14 22:15:23+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 4, ONT ID: 27
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT
+  --- END
+
+  ALARM 2431608 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-14 22:07:55+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 72
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT
+  --- END
+
+  ALARM 2431607 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-14 22:07:42+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 8, ONT ID: 2
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT
+  --- END
+
+  ALARM 2431601 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-14 22:04:16+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 12, ONT ID: 6
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT
+  --- END
+
+  ALARM 2431600 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-14 21:53:07+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 92
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT
+  --- END
+
+  ALARM 2431599 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-14 21:52:05+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 0, ONT ID: 51
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT
+  --- END
+
+  ALARM 2431597 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-14 21:48:15+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 6, ONT ID: 29
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT
+  --- END
+
+  ALARM 2431596 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-14 21:41:13+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 64
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT
+  --- END
+
+  ALARM 2431569 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2026-02-14 21:29:41+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 5, ONT ID: 54, Equipment ID: TX-6610
+  DESCRIPTION : The ONT is power off
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END
+
+  ALARM 2431552 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2026-02-14 21:17:18+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 11, ONT ID: 2, Equipment ID: F670LV9.0
+  DESCRIPTION : The ONT is power off
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END
+
+  ALARM 2431545 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2026-02-14 21:13:16+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 12, ONT ID: 28, Equipment ID: XX230v
+  DESCRIPTION : The ONT is power off
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END
+
+  ALARM 2431543 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-14 21:07:03+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 93
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT
+  --- END
+
+  ALARM 2431537 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-14 21:03:56+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 12, ONT ID: 33
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT
+  --- END
+
+  ALARM 2431511 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-14 20:36:22+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 69
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT
+  --- END
+
+  ALARM 2431482 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-14 20:04:38+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 0, ONT ID: 4
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT
+  --- END
+
+  ALARM 2431460 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-14 19:26:13+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 8, ONT ID: 94
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT
+  --- END
+
+  ALARM 2431454 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2026-02-14 19:20:41+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 7, ONT ID: 50, Equipment ID: GONUMINI3
+  DESCRIPTION : The ONT is power off
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END
+
+  ALARM 2431438 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-14 19:17:33+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 0, ONT ID: 40
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT
+  --- END
+
+  ALARM 2431435 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-14 19:15:19+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 6, ONT ID: 28
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT
+  --- END
+
+  ALARM 2431395 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-14 18:48:15+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 12, ONT ID: 33
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT
+  --- END
+
+  ALARM 2431386 FAULT WARNING 0x2e11999c SERVICE QUALITY 2026-02-14 18:44:24+08:00
+  ALARM NAME  : One or more ONTs under this port failed in ranging
+  SRVEFF      : SA
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 6
+  DESCRIPTION : One or more ONTs under this port failed in ranging and cannot go online
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT
+  --- END
+
+  ALARM 2431383 FAULT WARNING 0x2e112007 SERVICE QUALITY 2026-02-14 18:33:05+08:00
+  ALARM NAME  : The distribute fiber is broken or the OLT cannot receive expected optical signals from the ONT(LOSi/LOBi)
+  SRVEFF      : SA
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 6, ONT ID: 5, Equipment ID: XX230v
+  DESCRIPTION : The OLT cannot receive expected optical signals from the ONT in four consecutive frames
+  CAUSE       : (1) The fiber is broken
+(2) The quality of the optical path is poor
+(3) The ONT hardware fails
+  ADVICE      : (1) Check tributary optical fiber connection and backbone optical fiber orderly, clean the fiber connector and replace the fiber if necessary
+(2) Ensure that the optical attenuation of the optical path is normal
+(3) Reset the ONT or replace the ONT
+  --- END
+
+  ALARM 2431366 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2026-02-14 18:21:20+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 12, ONT ID: 39, Equipment ID: F670LV1.1.01
+  DESCRIPTION : The ONT is power off
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END
+
+  ALARM 2431359 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-14 18:15:13+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 7, ONT ID: 25
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT
+  --- END
+
+  ALARM 2431323 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-14 17:46:31+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 0, ONT ID: 28
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT
+  --- END
+
+  ALARM 2431312 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-14 17:37:24+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 6, ONT ID: 5
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT
+  --- END
+
+  ALARM 2431236 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2026-02-14 16:25:59+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 11, ONT ID: 6, Equipment ID: FD604GW-DG
+  DESCRIPTION : The ONT is power off
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END
+
+  ALARM 2431210 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2026-02-14 15:43:58+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 3, ONT ID: 32, Equipment ID: XX230v
+  DESCRIPTION : The ONT is power off
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END
+
+  ALARM 2430989 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-14 14:55:13+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 0, ONT ID: 23
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT
+  --- END
+
+  ALARM 2430935 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-14 14:10:12+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 91
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT
+  --- END
+
+  ALARM 2430859 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2026-02-14 12:47:31+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 12, ONT ID: 21, Equipment ID: EG8145X6-10
+  DESCRIPTION : The ONT is power off
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END
+
+  ALARM 2430760 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-14 11:02:12+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 96
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT
+  --- END
+
+  ALARM 2430759 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-14 11:01:12+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 7
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT
+  --- END
+
+  ALARM 2430751 FAULT WARNING 0x2e112007 SERVICE QUALITY 2026-02-14 10:58:48+08:00
+  ALARM NAME  : The distribute fiber is broken or the OLT cannot receive expected optical signals from the ONT(LOSi/LOBi)
+  SRVEFF      : SA
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 100, Equipment ID: XX530v
+  DESCRIPTION : The OLT cannot receive expected optical signals from the ONT in four consecutive frames
+  CAUSE       : (1) The fiber is broken
+(2) The quality of the optical path is poor
+(3) The ONT hardware fails           
+  ADVICE      : (1) Check tributary optical fiber connection and backbone optical fiber orderly, clean the fiber connector and replace the fiber if necessary
+(2) Ensure that the optical attenuation of the optical path is normal
+(3) Reset the ONT or replace the ONT 
+  --- END                            
+                                     
+  ALARM 2430737 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-14 10:36:46+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 0, ONT ID: 15
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2430736 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-14 10:35:37+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 11, ONT ID: 32
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2430719 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-14 10:16:12+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 101
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2430683 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-14 09:21:12+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 8, ONT ID: 4
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2430682 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-14 09:20:52+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 8, ONT ID: 87
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2430664 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2026-02-14 08:56:52+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 8, ONT ID: 92, Equipment ID: MONUMAXFIBER1000
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2430644 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2026-02-14 08:35:00+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 0, ONT ID: 26, Equipment ID: F680V6.0.03
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2430641 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2026-02-14 08:23:45+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 0, ONT ID: 46, Equipment ID: F6201BV9.3.12
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2430597 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-14 07:01:12+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 103
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2430565 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-14 05:48:21+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 0, ONT ID: 36
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2430564 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2026-02-14 05:48:12+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 11, ONT ID: 17, Equipment ID: F612V9.2
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2430460 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-14 02:25:55+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 8, ONT ID: 86
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2430412 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-14 00:39:14+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 60
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2430312 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-13 22:24:12+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 0, ONT ID: 35
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2430302 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2026-02-13 21:55:13+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 7, ONT ID: 46, Equipment ID: FD511G-X
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2430285 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-13 21:18:02+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 11, ONT ID: 1
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2430203 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-13 19:34:59+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 0, ONT ID: 25
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2430044 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2026-02-13 17:10:17+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 11, ONT ID: 19, Equipment ID: F6201BV9.3.12
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2429895 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-13 15:42:11+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 0, ONT ID: 67
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2429846 FAULT WARNING 0x2e21a102 PROCESS ERROR 2026-02-13 15:15:11+08:00
+  ALARM NAME  : The GPON ONT configuration recovery fails
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 11, ONT ID: 19
+  DESCRIPTION : The GPON ONT configuration recovery fails and some services are affected
+  CAUSE       : (1) The current configuration is beyond the actual capabilities of the ONT
+(2) The software of ONT is faulty    
+  ADVICE      : (1) Check the current configuration, and modify the configuration to match the actual capabilities of the ONT
+(2) Reset the ONT manually or re-register the ONT
+  --- END                            
+                                     
+  ALARM 2429665 FAULT WARNING 0x2e21a102 PROCESS ERROR 2026-02-13 13:28:11+08:00
+  ALARM NAME  : The GPON ONT configuration recovery fails
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 0, ONT ID: 67
+  DESCRIPTION : The GPON ONT configuration recovery fails and some services are affected
+  CAUSE       : (1) The current configuration is beyond the actual capabilities of the ONT
+(2) The software of ONT is faulty    
+  ADVICE      : (1) Check the current configuration, and modify the configuration to match the actual capabilities of the ONT
+(2) Reset the ONT manually or re-register the ONT
+  --- END                            
+                                     
+  ALARM 2429503 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-13 11:50:16+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 71
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2429497 FAULT WARNING 0x2e112007 SERVICE QUALITY 2026-02-13 11:42:06+08:00
+  ALARM NAME  : The distribute fiber is broken or the OLT cannot receive expected optical signals from the ONT(LOSi/LOBi)
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 7, ONT ID: 18, Equipment ID: F6201BV9.3.12
+  DESCRIPTION : The OLT cannot receive expected optical signals from the ONT in four consecutive frames
+  CAUSE       : (1) The fiber is broken
+(2) The quality of the optical path is poor
+(3) The ONT hardware fails           
+  ADVICE      : (1) Check tributary optical fiber connection and backbone optical fiber orderly, clean the fiber connector and replace the fiber if necessary
+(2) Ensure that the optical attenuation of the optical path is normal
+(3) Reset the ONT or replace the ONT 
+  --- END                            
+                                     
+  ALARM 2429496 FAULT WARNING 0x2e21a102 PROCESS ERROR 2026-02-13 11:41:11+08:00
+  ALARM NAME  : The GPON ONT configuration recovery fails
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 4, ONT ID: 34
+  DESCRIPTION : The GPON ONT configuration recovery fails and some services are affected
+  CAUSE       : (1) The current configuration is beyond the actual capabilities of the ONT
+(2) The software of ONT is faulty    
+  ADVICE      : (1) Check the current configuration, and modify the configuration to match the actual capabilities of the ONT
+(2) Reset the ONT manually or re-register the ONT
+  --- END                            
+                                     
+  ALARM 2429459 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2026-02-13 11:20:26+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 1, ONT ID: 1, Equipment ID: EG8145V5
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2429397 FAULT WARNING 0x2e112007 SERVICE QUALITY 2026-02-13 10:34:31+08:00
+  ALARM NAME  : The distribute fiber is broken or the OLT cannot receive expected optical signals from the ONT(LOSi/LOBi)
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 94, Equipment ID: F6201BV9.3.12
+  DESCRIPTION : The OLT cannot receive expected optical signals from the ONT in four consecutive frames
+  CAUSE       : (1) The fiber is broken
+(2) The quality of the optical path is poor
+(3) The ONT hardware fails           
+  ADVICE      : (1) Check tributary optical fiber connection and backbone optical fiber orderly, clean the fiber connector and replace the fiber if necessary
+(2) Ensure that the optical attenuation of the optical path is normal
+(3) Reset the ONT or replace the ONT 
+  --- END                            
+                                     
+  ALARM 2429390 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-13 10:29:11+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 30
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2429389 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-13 10:28:11+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 6, ONT ID: 78
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2429351 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2026-02-13 10:08:54+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 2, ONT ID: 43, Equipment ID: F6201BV9.3.12
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2429179 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2026-02-13 08:29:52+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 85, Equipment ID: F660V7.1
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2428982 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2026-02-13 06:28:26+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 1, ONT ID: 15, Equipment ID: F660V7.1
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2428950 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2026-02-13 06:08:38+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 4, ONT ID: 85, Equipment ID: EG8010H
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2428928 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-13 05:58:52+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 94
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2428806 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-13 04:11:12+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 8, ONT ID: 71
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2428425 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2026-02-12 22:49:26+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 6, ONT ID: 60, Equipment ID: XX530v
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2428380 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-12 22:17:53+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 85
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2428373 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-12 22:02:31+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 84
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2428364 FAULT WARNING 0x2e112007 SERVICE QUALITY 2026-02-12 21:49:12+08:00
+  ALARM NAME  : The distribute fiber is broken or the OLT cannot receive expected optical signals from the ONT(LOSi/LOBi)
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 8, ONT ID: 45, Equipment ID: F6201BV9.3.12
+  DESCRIPTION : The OLT cannot receive expected optical signals from the ONT in four consecutive frames
+  CAUSE       : (1) The fiber is broken
+(2) The quality of the optical path is poor
+(3) The ONT hardware fails           
+  ADVICE      : (1) Check tributary optical fiber connection and backbone optical fiber orderly, clean the fiber connector and replace the fiber if necessary
+(2) Ensure that the optical attenuation of the optical path is normal
+(3) Reset the ONT or replace the ONT 
+  --- END                            
+                                     
+  ALARM 2428305 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-12 21:06:10+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 75
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2428245 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-12 20:21:10+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 76
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2428234 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-12 20:17:10+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 0, ONT ID: 46
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2428138 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-12 18:28:10+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 0, ONT ID: 57
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2428042 FAULT WARNING 0x2e112007 SERVICE QUALITY 2026-02-12 16:47:00+08:00
+  ALARM NAME  : The distribute fiber is broken or the OLT cannot receive expected optical signals from the ONT(LOSi/LOBi)
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 12, ONT ID: 17, Equipment ID: XX530v
+  DESCRIPTION : The OLT cannot receive expected optical signals from the ONT in four consecutive frames
+  CAUSE       : (1) The fiber is broken
+(2) The quality of the optical path is poor
+(3) The ONT hardware fails           
+  ADVICE      : (1) Check tributary optical fiber connection and backbone optical fiber orderly, clean the fiber connector and replace the fiber if necessary
+(2) Ensure that the optical attenuation of the optical path is normal
+(3) Reset the ONT or replace the ONT 
+  --- END                            
+                                     
+  ALARM 2428006 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-12 16:22:10+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 89
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2427779 FAULT WARNING 0x2e112007 SERVICE QUALITY 2026-02-12 14:55:51+08:00
+  ALARM NAME  : The distribute fiber is broken or the OLT cannot receive expected optical signals from the ONT(LOSi/LOBi)
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 7, ONT ID: 17, Equipment ID: FD604GW-DG
+  DESCRIPTION : The OLT cannot receive expected optical signals from the ONT in four consecutive frames
+  CAUSE       : (1) The fiber is broken
+(2) The quality of the optical path is poor
+(3) The ONT hardware fails           
+  ADVICE      : (1) Check tributary optical fiber connection and backbone optical fiber orderly, clean the fiber connector and replace the fiber if necessary
+(2) Ensure that the optical attenuation of the optical path is normal
+(3) Reset the ONT or replace the ONT 
+  --- END                            
+                                     
+  ALARM 2427686 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-12 13:59:10+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 99
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2427640 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-12 13:36:03+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 61
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2427638 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-12 13:35:32+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 6, ONT ID: 84
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2427627 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-12 13:25:10+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 8, ONT ID: 96
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2427619 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-12 13:22:10+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 6, ONT ID: 16
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2427618 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-12 13:22:10+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 6, ONT ID: 18
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2427617 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-12 13:22:10+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 6, ONT ID: 9
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2427613 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-12 13:21:33+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 8, ONT ID: 55
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2427612 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-12 13:21:33+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 8, ONT ID: 32
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2427607 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-12 13:21:14+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 97
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2427602 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-12 13:21:14+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 88
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2427601 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-12 13:21:14+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 86
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2427600 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-12 13:21:14+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 81
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2427599 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-12 13:21:14+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 77
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2427597 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-12 13:21:14+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 74
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2427596 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-12 13:21:14+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 70
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2427595 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-12 13:21:14+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 67
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2427594 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-12 13:21:14+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 66
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2427593 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-12 13:21:14+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 58
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2427592 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-12 13:21:14+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 56
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2427591 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-12 13:21:14+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 54
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2427589 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-12 13:21:13+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 41
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2427586 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-12 13:21:10+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 6, ONT ID: 91
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2427584 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-12 13:21:10+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 6, ONT ID: 86
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2427578 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-12 13:21:01+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 8, ONT ID: 102
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2427574 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-12 13:21:01+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 8, ONT ID: 33
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2427436 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-12 13:20:41+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 83
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2427434 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-12 13:20:41+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 73
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2427432 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-12 13:20:41+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 68
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2427430 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-12 13:20:41+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 63
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2427389 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-12 13:20:28+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 8, ONT ID: 20
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2427308 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-12 13:20:16+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 0, ONT ID: 9
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2427307 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-12 13:20:16+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 0, ONT ID: 3
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2425599 FAULT WARNING 0x2e112007 SERVICE QUALITY 2026-02-11 18:42:15+08:00
+  ALARM NAME  : The distribute fiber is broken or the OLT cannot receive expected optical signals from the ONT(LOSi/LOBi)
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 0, ONT ID: 49, Equipment ID: XX230v
+  DESCRIPTION : The OLT cannot receive expected optical signals from the ONT in four consecutive frames
+  CAUSE       : (1) The fiber is broken
+(2) The quality of the optical path is poor
+(3) The ONT hardware fails           
+  ADVICE      : (1) Check tributary optical fiber connection and backbone optical fiber orderly, clean the fiber connector and replace the fiber if necessary
+(2) Ensure that the optical attenuation of the optical path is normal
+(3) Reset the ONT or replace the ONT 
+  --- END                            
+                                     
+  ALARM 2424793 FAULT WARNING 0x2e112007 SERVICE QUALITY 2026-02-11 14:04:53+08:00
+  ALARM NAME  : The distribute fiber is broken or the OLT cannot receive expected optical signals from the ONT(LOSi/LOBi)
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 8, ONT ID: 99, Equipment ID: MONUMAXFIBER1000
+  DESCRIPTION : The OLT cannot receive expected optical signals from the ONT in four consecutive frames
+  CAUSE       : (1) The fiber is broken
+(2) The quality of the optical path is poor
+(3) The ONT hardware fails           
+  ADVICE      : (1) Check tributary optical fiber connection and backbone optical fiber orderly, clean the fiber connector and replace the fiber if necessary
+(2) Ensure that the optical attenuation of the optical path is normal
+(3) Reset the ONT or replace the ONT 
+  --- END                            
+                                     
+  ALARM 2424617 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-11 12:32:08+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 8, ONT ID: 99
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2424177 FAULT WARNING 0x2e112007 SERVICE QUALITY 2026-02-11 11:51:08+08:00
+  ALARM NAME  : The distribute fiber is broken or the OLT cannot receive expected optical signals from the ONT(LOSi/LOBi)
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 98, Equipment ID: GONUMINI3
+  DESCRIPTION : The OLT cannot receive expected optical signals from the ONT in four consecutive frames
+  CAUSE       : (1) The fiber is broken
+(2) The quality of the optical path is poor
+(3) The ONT hardware fails           
+  ADVICE      : (1) Check tributary optical fiber connection and backbone optical fiber orderly, clean the fiber connector and replace the fiber if necessary
+(2) Ensure that the optical attenuation of the optical path is normal
+(3) Reset the ONT or replace the ONT 
+  --- END                            
+                                     
+  ALARM 2412833 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2026-02-06 17:14:12+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 6, ONT ID: 52, Equipment ID: XX230v
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2412581 FAULT WARNING 0x2e112007 SERVICE QUALITY 2026-02-06 14:00:57+08:00
+  ALARM NAME  : The distribute fiber is broken or the OLT cannot receive expected optical signals from the ONT(LOSi/LOBi)
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 12, ONT ID: 29, Equipment ID: XX230v
+  DESCRIPTION : The OLT cannot receive expected optical signals from the ONT in four consecutive frames
+  CAUSE       : (1) The fiber is broken
+(2) The quality of the optical path is poor
+(3) The ONT hardware fails           
+  ADVICE      : (1) Check tributary optical fiber connection and backbone optical fiber orderly, clean the fiber connector and replace the fiber if necessary
+(2) Ensure that the optical attenuation of the optical path is normal
+(3) Reset the ONT or replace the ONT 
+  --- END                            
+                                     
+  ALARM 2410765 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-05 21:37:29+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 6, ONT ID: 54
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2410757 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2026-02-05 21:34:05+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 7, ONT ID: 6, Equipment ID: F6201BV9.3.12
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2405091 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2026-02-03 10:24:07+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 7, ONT ID: 52, Equipment ID: XC220-G3
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2404138 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-02-02 21:47:08+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 3, ONT ID: 14
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2400624 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2026-01-30 23:57:42+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 7, ONT ID: 47, Equipment ID: F6201BV9.3.12
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2399999 FAULT WARNING 0x2e112007 SERVICE QUALITY 2026-01-30 09:33:12+08:00
+  ALARM NAME  : The distribute fiber is broken or the OLT cannot receive expected optical signals from the ONT(LOSi/LOBi)
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 8, ONT ID: 10, Equipment ID: TX-6610
+  DESCRIPTION : The OLT cannot receive expected optical signals from the ONT in four consecutive frames
+  CAUSE       : (1) The fiber is broken
+(2) The quality of the optical path is poor
+(3) The ONT hardware fails           
+  ADVICE      : (1) Check tributary optical fiber connection and backbone optical fiber orderly, clean the fiber connector and replace the fiber if necessary
+(2) Ensure that the optical attenuation of the optical path is normal
+(3) Reset the ONT or replace the ONT 
+  --- END                            
+                                     
+  ALARM 2397688 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2026-01-28 23:27:48+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 4, ONT ID: 35, Equipment ID: MONUMAXFIBER1000
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2397333 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2026-01-28 16:32:37+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 4, ONT ID: 45, Equipment ID: F670LV9.0
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2396334 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2026-01-28 07:50:49+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 14, ONT ID: 0, Equipment ID: TZ7c
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2388207 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2026-01-23 19:39:11+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 11, ONT ID: 42, Equipment ID: GONUMINI3
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2387518 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2026-01-23 06:30:22+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 11, ONT ID: 20, Equipment ID: F612V9.2
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2385676 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2026-01-21 14:51:56+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 4, ONT ID: 26, Equipment ID: F670LV9.0
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2382046 FAULT WARNING 0x2e112007 SERVICE QUALITY 2026-01-20 00:52:13+08:00
+  ALARM NAME  : The distribute fiber is broken or the OLT cannot receive expected optical signals from the ONT(LOSi/LOBi)
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 12, ONT ID: 10, Equipment ID: F6201BV9.3.12
+  DESCRIPTION : The OLT cannot receive expected optical signals from the ONT in four consecutive frames
+  CAUSE       : (1) The fiber is broken
+(2) The quality of the optical path is poor
+(3) The ONT hardware fails           
+  ADVICE      : (1) Check tributary optical fiber connection and backbone optical fiber orderly, clean the fiber connector and replace the fiber if necessary
+(2) Ensure that the optical attenuation of the optical path is normal
+(3) Reset the ONT or replace the ONT 
+  --- END                            
+                                     
+  ALARM 2375376 FAULT WARNING 0x2e112002 SERVICE QUALITY 2026-01-17 14:40:34+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 1, ONT ID: 45
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2363472 FAULT WARNING 0x2e112007 SERVICE QUALITY 2026-01-14 08:45:05+08:00
+  ALARM NAME  : The distribute fiber is broken or the OLT cannot receive expected optical signals from the ONT(LOSi/LOBi)
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 3, ONT ID: 25, Equipment ID: XX230v
+  DESCRIPTION : The OLT cannot receive expected optical signals from the ONT in four consecutive frames
+  CAUSE       : (1) The fiber is broken
+(2) The quality of the optical path is poor
+(3) The ONT hardware fails           
+  ADVICE      : (1) Check tributary optical fiber connection and backbone optical fiber orderly, clean the fiber connector and replace the fiber if necessary
+(2) Ensure that the optical attenuation of the optical path is normal
+(3) Reset the ONT or replace the ONT 
+  --- END                            
+                                     
+  ALARM 2359214 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2026-01-12 16:05:53+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 5, ONT ID: 58, Equipment ID: R1v2
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2356042 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2026-01-10 18:23:26+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 3, ONT ID: 27, Equipment ID: EG8145V5-V2
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2355148 FAULT WARNING 0x2e112007 SERVICE QUALITY 2026-01-10 11:58:16+08:00
+  ALARM NAME  : The distribute fiber is broken or the OLT cannot receive expected optical signals from the ONT(LOSi/LOBi)
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 12, ONT ID: 4, Equipment ID: 110GV1.0
+  DESCRIPTION : The OLT cannot receive expected optical signals from the ONT in four consecutive frames
+  CAUSE       : (1) The fiber is broken
+(2) The quality of the optical path is poor
+(3) The ONT hardware fails           
+  ADVICE      : (1) Check tributary optical fiber connection and backbone optical fiber orderly, clean the fiber connector and replace the fiber if necessary
+(2) Ensure that the optical attenuation of the optical path is normal
+(3) Reset the ONT or replace the ONT 
+  --- END                            
+                                     
+  ALARM 2353421 FAULT WARNING 0x2e112007 SERVICE QUALITY 2026-01-09 10:37:50+08:00
+  ALARM NAME  : The distribute fiber is broken or the OLT cannot receive expected optical signals from the ONT(LOSi/LOBi)
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 6, ONT ID: 59, Equipment ID: XX530v
+  DESCRIPTION : The OLT cannot receive expected optical signals from the ONT in four consecutive frames
+  CAUSE       : (1) The fiber is broken
+(2) The quality of the optical path is poor
+(3) The ONT hardware fails           
+  ADVICE      : (1) Check tributary optical fiber connection and backbone optical fiber orderly, clean the fiber connector and replace the fiber if necessary
+(2) Ensure that the optical attenuation of the optical path is normal
+(3) Reset the ONT or replace the ONT 
+  --- END                            
+                                     
+  ALARM 2348184 FAULT WARNING 0x2e112007 SERVICE QUALITY 2026-01-05 13:55:38+08:00
+  ALARM NAME  : The distribute fiber is broken or the OLT cannot receive expected optical signals from the ONT(LOSi/LOBi)
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 11, ONT ID: 25, Equipment ID: XX230v
+  DESCRIPTION : The OLT cannot receive expected optical signals from the ONT in four consecutive frames
+  CAUSE       : (1) The fiber is broken
+(2) The quality of the optical path is poor
+(3) The ONT hardware fails           
+  ADVICE      : (1) Check tributary optical fiber connection and backbone optical fiber orderly, clean the fiber connector and replace the fiber if necessary
+(2) Ensure that the optical attenuation of the optical path is normal
+(3) Reset the ONT or replace the ONT 
+  --- END                            
+                                     
+  ALARM 2347593 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2026-01-04 19:02:34+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 11, ONT ID: 30, Equipment ID: XX230v
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2342205 FAULT WARNING 0x2e112007 SERVICE QUALITY 2025-12-31 13:53:11+08:00
+  ALARM NAME  : The distribute fiber is broken or the OLT cannot receive expected optical signals from the ONT(LOSi/LOBi)
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 11, ONT ID: 69, Equipment ID: XX230v
+  DESCRIPTION : The OLT cannot receive expected optical signals from the ONT in four consecutive frames
+  CAUSE       : (1) The fiber is broken
+(2) The quality of the optical path is poor
+(3) The ONT hardware fails           
+  ADVICE      : (1) Check tributary optical fiber connection and backbone optical fiber orderly, clean the fiber connector and replace the fiber if necessary
+(2) Ensure that the optical attenuation of the optical path is normal
+(3) Reset the ONT or replace the ONT 
+  --- END                            
+                                     
+  ALARM 2325268 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2025-12-22 18:46:47+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 15, ONT ID: 30, Equipment ID: XX230v
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2321535 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2025-12-20 09:20:27+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 4, ONT ID: 23, Equipment ID: MONUMAXFIBER1000
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2310665 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2025-12-13 19:17:36+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 2, ONT ID: 35, Equipment ID: XX230v
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2310100 FAULT WARNING 0x2e112007 SERVICE QUALITY 2025-12-13 09:05:46+08:00
+  ALARM NAME  : The distribute fiber is broken or the OLT cannot receive expected optical signals from the ONT(LOSi/LOBi)
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 11, ONT ID: 122, Equipment ID: GPONV1.0
+  DESCRIPTION : The OLT cannot receive expected optical signals from the ONT in four consecutive frames
+  CAUSE       : (1) The fiber is broken
+(2) The quality of the optical path is poor
+(3) The ONT hardware fails           
+  ADVICE      : (1) Check tributary optical fiber connection and backbone optical fiber orderly, clean the fiber connector and replace the fiber if necessary
+(2) Ensure that the optical attenuation of the optical path is normal
+(3) Reset the ONT or replace the ONT 
+  --- END                            
+                                     
+  ALARM 2308408 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2025-12-12 14:25:06+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 12, ONT ID: 55, Equipment ID: XX230v
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2300586 FAULT WARNING 0x2e112007 SERVICE QUALITY 2025-12-10 12:58:23+08:00
+  ALARM NAME  : The distribute fiber is broken or the OLT cannot receive expected optical signals from the ONT(LOSi/LOBi)
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 6, ONT ID: 62, Equipment ID: XX230v
+  DESCRIPTION : The OLT cannot receive expected optical signals from the ONT in four consecutive frames
+  CAUSE       : (1) The fiber is broken
+(2) The quality of the optical path is poor
+(3) The ONT hardware fails           
+  ADVICE      : (1) Check tributary optical fiber connection and backbone optical fiber orderly, clean the fiber connector and replace the fiber if necessary
+(2) Ensure that the optical attenuation of the optical path is normal
+(3) Reset the ONT or replace the ONT 
+  --- END                            
+                                     
+  ALARM 2290533 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2025-12-05 08:41:49+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 11, ONT ID: 118, Equipment ID: F660V7.1
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2288815 FAULT WARNING 0x2e112007 SERVICE QUALITY 2025-12-03 09:17:13+08:00
+  ALARM NAME  : The distribute fiber is broken or the OLT cannot receive expected optical signals from the ONT(LOSi/LOBi)
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 7, ONT ID: 32, Equipment ID: F601
+  DESCRIPTION : The OLT cannot receive expected optical signals from the ONT in four consecutive frames
+  CAUSE       : (1) The fiber is broken
+(2) The quality of the optical path is poor
+(3) The ONT hardware fails           
+  ADVICE      : (1) Check tributary optical fiber connection and backbone optical fiber orderly, clean the fiber connector and replace the fiber if necessary
+(2) Ensure that the optical attenuation of the optical path is normal
+(3) Reset the ONT or replace the ONT 
+  --- END                            
+                                     
+  ALARM 2287527 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2025-12-02 17:02:19+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 4, ONT ID: 10, Equipment ID: M10G
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2287254 FAULT WARNING 0x2e112007 SERVICE QUALITY 2025-12-02 13:49:07+08:00
+  ALARM NAME  : The distribute fiber is broken or the OLT cannot receive expected optical signals from the ONT(LOSi/LOBi)
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 11, ONT ID: 115, Equipment ID: FD604GW-DG
+  DESCRIPTION : The OLT cannot receive expected optical signals from the ONT in four consecutive frames
+  CAUSE       : (1) The fiber is broken
+(2) The quality of the optical path is poor
+(3) The ONT hardware fails           
+  ADVICE      : (1) Check tributary optical fiber connection and backbone optical fiber orderly, clean the fiber connector and replace the fiber if necessary
+(2) Ensure that the optical attenuation of the optical path is normal
+(3) Reset the ONT or replace the ONT 
+  --- END                            
+                                     
+  ALARM 2282869 FAULT MAJOR 0x0a310021 EQUIPMENT 2025-11-26 18:54:28+08:00
+  ALARM NAME  : The upstream ethernet port connection fails or the state of it is abnormal
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 8, PortID: 0
+  DESCRIPTION : The upstream ethernet port fails and all the services on this port are interrupted
+  CAUSE       : (1)The port is offline
+(2)The status of the board changes   
+(3)The electronic switch is changed  
+  ADVICE      : (1)Check whether the ethernet cable is normal
+(2)Ensure that the board is in the normal state
+(3)Ensure that the electronic switch is correctly set
+  --- END                            
+                                     
+  ALARM 2282868 FAULT CRITICAL 0x0a31a0de EQUIPMENT 2025-11-26 18:54:28+08:00
+  ALARM NAME  : The optical transceiver is absence
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 8, PortID: 0
+  DESCRIPTION : The optical transceiver status has changed into absence
+  CAUSE       : The optical transceiver of the port is not in position
+  ADVICE      : (1)Insert the optical transceiver into the port again
+(2)Replace the board or the daughter board where the optical transceiver resides, and then insert the optical transceiver
+  --- END                            
+                                     
+  ALARM 2282602 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2025-11-27 06:15:18+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 0, ONT ID: 1, Equipment ID: F670LV9.0
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2277600 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2025-11-21 14:09:46+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 2, ONT ID: 48, Equipment ID: F6201BV9.3.12
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2276672 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2025-11-20 19:23:28+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 12, ONT ID: 27, Equipment ID: TZ7c
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2263431 FAULT WARNING 0x2e112007 SERVICE QUALITY 2025-11-11 13:46:04+08:00
+  ALARM NAME  : The distribute fiber is broken or the OLT cannot receive expected optical signals from the ONT(LOSi/LOBi)
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 7, ONT ID: 48, Equipment ID: XX230v
+  DESCRIPTION : The OLT cannot receive expected optical signals from the ONT in four consecutive frames
+  CAUSE       : (1) The fiber is broken
+(2) The quality of the optical path is poor
+(3) The ONT hardware fails           
+  ADVICE      : (1) Check tributary optical fiber connection and backbone optical fiber orderly, clean the fiber connector and replace the fiber if necessary
+(2) Ensure that the optical attenuation of the optical path is normal
+(3) Reset the ONT or replace the ONT 
+  --- END                            
+                                     
+  ALARM 2253402 FAULT WARNING 0x2e21a102 PROCESS ERROR 2025-11-05 09:01:12+08:00
+  ALARM NAME  : The GPON ONT configuration recovery fails
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 42
+  DESCRIPTION : The GPON ONT configuration recovery fails and some services are affected
+  CAUSE       : (1) The current configuration is beyond the actual capabilities of the ONT
+(2) The software of ONT is faulty    
+  ADVICE      : (1) Check the current configuration, and modify the configuration to match the actual capabilities of the ONT
+(2) Reset the ONT manually or re-register the ONT
+  --- END                            
+                                     
+  ALARM 2253400 FAULT WARNING 0x2e21a102 PROCESS ERROR 2025-11-05 09:01:08+08:00
+  ALARM NAME  : The GPON ONT configuration recovery fails
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 18
+  DESCRIPTION : The GPON ONT configuration recovery fails and some services are affected
+  CAUSE       : (1) The current configuration is beyond the actual capabilities of the ONT
+(2) The software of ONT is faulty    
+  ADVICE      : (1) Check the current configuration, and modify the configuration to match the actual capabilities of the ONT
+(2) Reset the ONT manually or re-register the ONT
+  --- END                            
+                                     
+  ALARM 2253399 FAULT WARNING 0x2e21a102 PROCESS ERROR 2025-11-05 09:01:08+08:00
+  ALARM NAME  : The GPON ONT configuration recovery fails
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 17
+  DESCRIPTION : The GPON ONT configuration recovery fails and some services are affected
+  CAUSE       : (1) The current configuration is beyond the actual capabilities of the ONT
+(2) The software of ONT is faulty    
+  ADVICE      : (1) Check the current configuration, and modify the configuration to match the actual capabilities of the ONT
+(2) Reset the ONT manually or re-register the ONT
+  --- END                            
+                                     
+  ALARM 2253398 FAULT WARNING 0x2e21a102 PROCESS ERROR 2025-11-05 09:01:08+08:00
+  ALARM NAME  : The GPON ONT configuration recovery fails
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 15
+  DESCRIPTION : The GPON ONT configuration recovery fails and some services are affected
+  CAUSE       : (1) The current configuration is beyond the actual capabilities of the ONT
+(2) The software of ONT is faulty    
+  ADVICE      : (1) Check the current configuration, and modify the configuration to match the actual capabilities of the ONT
+(2) Reset the ONT manually or re-register the ONT
+  --- END                            
+                                     
+  ALARM 2253397 FAULT WARNING 0x2e21a102 PROCESS ERROR 2025-11-05 09:01:07+08:00
+  ALARM NAME  : The GPON ONT configuration recovery fails
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 10
+  DESCRIPTION : The GPON ONT configuration recovery fails and some services are affected
+  CAUSE       : (1) The current configuration is beyond the actual capabilities of the ONT
+(2) The software of ONT is faulty    
+  ADVICE      : (1) Check the current configuration, and modify the configuration to match the actual capabilities of the ONT
+(2) Reset the ONT manually or re-register the ONT
+  --- END                            
+                                     
+  ALARM 2253396 FAULT WARNING 0x2e21a102 PROCESS ERROR 2025-11-05 09:01:07+08:00
+  ALARM NAME  : The GPON ONT configuration recovery fails
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 9
+  DESCRIPTION : The GPON ONT configuration recovery fails and some services are affected
+  CAUSE       : (1) The current configuration is beyond the actual capabilities of the ONT
+(2) The software of ONT is faulty    
+  ADVICE      : (1) Check the current configuration, and modify the configuration to match the actual capabilities of the ONT
+(2) Reset the ONT manually or re-register the ONT
+  --- END                            
+                                     
+  ALARM 2253395 FAULT WARNING 0x2e21a102 PROCESS ERROR 2025-11-05 09:01:07+08:00
+  ALARM NAME  : The GPON ONT configuration recovery fails
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 8
+  DESCRIPTION : The GPON ONT configuration recovery fails and some services are affected
+  CAUSE       : (1) The current configuration is beyond the actual capabilities of the ONT
+(2) The software of ONT is faulty    
+  ADVICE      : (1) Check the current configuration, and modify the configuration to match the actual capabilities of the ONT
+(2) Reset the ONT manually or re-register the ONT
+  --- END                            
+                                     
+  ALARM 2249131 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2025-11-01 14:40:46+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 0, ONT ID: 53, Equipment ID: XX230v
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2242226 FAULT WARNING 0x2e112007 SERVICE QUALITY 2025-10-29 06:14:26+08:00
+  ALARM NAME  : The distribute fiber is broken or the OLT cannot receive expected optical signals from the ONT(LOSi/LOBi)
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 90, Equipment ID: XX230v
+  DESCRIPTION : The OLT cannot receive expected optical signals from the ONT in four consecutive frames
+  CAUSE       : (1) The fiber is broken
+(2) The quality of the optical path is poor
+(3) The ONT hardware fails           
+  ADVICE      : (1) Check tributary optical fiber connection and backbone optical fiber orderly, clean the fiber connector and replace the fiber if necessary
+(2) Ensure that the optical attenuation of the optical path is normal
+(3) Reset the ONT or replace the ONT 
+  --- END                            
+                                     
+  ALARM 2242224 FAULT WARNING 0x2e112007 SERVICE QUALITY 2025-10-29 06:14:26+08:00
+  ALARM NAME  : The distribute fiber is broken or the OLT cannot receive expected optical signals from the ONT(LOSi/LOBi)
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 0, Equipment ID: XX230v
+  DESCRIPTION : The OLT cannot receive expected optical signals from the ONT in four consecutive frames
+  CAUSE       : (1) The fiber is broken
+(2) The quality of the optical path is poor
+(3) The ONT hardware fails           
+  ADVICE      : (1) Check tributary optical fiber connection and backbone optical fiber orderly, clean the fiber connector and replace the fiber if necessary
+(2) Ensure that the optical attenuation of the optical path is normal
+(3) Reset the ONT or replace the ONT 
+  --- END                            
+                                     
+  ALARM 2242173 FAULT WARNING 0x2e112002 SERVICE QUALITY 2025-10-29 05:41:06+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 10, ONT ID: 0
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2238808 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2025-10-26 19:23:45+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 8, ONT ID: 8, Equipment ID: XX230v
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2232558 FAULT WARNING 0x2e112007 SERVICE QUALITY 2025-10-20 11:59:34+08:00
+  ALARM NAME  : The distribute fiber is broken or the OLT cannot receive expected optical signals from the ONT(LOSi/LOBi)
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 4, ONT ID: 16, Equipment ID: F670LV1.1.01
+  DESCRIPTION : The OLT cannot receive expected optical signals from the ONT in four consecutive frames
+  CAUSE       : (1) The fiber is broken
+(2) The quality of the optical path is poor
+(3) The ONT hardware fails           
+  ADVICE      : (1) Check tributary optical fiber connection and backbone optical fiber orderly, clean the fiber connector and replace the fiber if necessary
+(2) Ensure that the optical attenuation of the optical path is normal
+(3) Reset the ONT or replace the ONT 
+  --- END                            
+                                     
+  ALARM 2224904 FAULT WARNING 0x2e112007 SERVICE QUALITY 2025-10-14 16:18:30+08:00
+  ALARM NAME  : The distribute fiber is broken or the OLT cannot receive expected optical signals from the ONT(LOSi/LOBi)
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 12, ONT ID: 53, Equipment ID: F670LV9.0
+  DESCRIPTION : The OLT cannot receive expected optical signals from the ONT in four consecutive frames
+  CAUSE       : (1) The fiber is broken
+(2) The quality of the optical path is poor
+(3) The ONT hardware fails           
+  ADVICE      : (1) Check tributary optical fiber connection and backbone optical fiber orderly, clean the fiber connector and replace the fiber if necessary
+(2) Ensure that the optical attenuation of the optical path is normal
+(3) Reset the ONT or replace the ONT 
+  --- END                            
+                                     
+  ALARM 2224894 FAULT WARNING 0x2e112002 SERVICE QUALITY 2025-10-14 15:58:24+08:00
+  ALARM NAME  : The loss of GEM channel delineation (LCDGi) occurs
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 12, ONT ID: 53
+  DESCRIPTION : Several consecutive GEM frames can not be delimited because of HEC errors,the ONT goes offline
+  CAUSE       : (1) The quality of the optical path is poor
+(2) The ONT is faulty                
+  ADVICE      : (1) Check the fiber connection, ensure that the optical fiber is connected correctly and securely
+(2) Clean the fiber connector        
+(3) Replace the fiber if the optical fiber is aged, bent, or damaged
+(4) Reset or replace the ONT         
+  --- END                            
+                                     
+  ALARM 2212484 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2025-10-02 15:56:15+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 4, ONT ID: 31, Equipment ID: XX230v
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2207072 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2025-09-27 17:54:29+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 7, ONT ID: 39, Equipment ID: XX530v
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2203678 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2025-09-24 17:04:15+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 12, ONT ID: 10, Equipment ID: F670LV1.1.01
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2202427 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2025-09-23 18:10:35+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 4, ONT ID: 20, Equipment ID: F601
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2194131 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2025-09-19 19:44:41+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 1, ONT ID: 11, Equipment ID: XC220-G3v
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2178304 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2025-09-07 10:38:24+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 2, ONT ID: 38, Equipment ID: XX230v
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2174511 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2025-09-03 14:04:09+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 0, ONT ID: 54, Equipment ID: GONUMINI3
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2173859 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2025-09-02 16:03:12+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 12, ONT ID: 36, Equipment ID: F680V6.0.03
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2168290 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2025-08-28 17:57:21+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 2, ONT ID: 41, Equipment ID: XX230v
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2152787 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2025-08-11 21:26:52+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 0, ONT ID: 57, Equipment ID: XX230v
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2150810 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2025-08-09 13:01:56+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 12, ONT ID: 32, Equipment ID: XR500v
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2139775 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2025-07-31 21:48:07+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 12, ONT ID: 30, Equipment ID: XX230v
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2139281 FAULT WARNING 0x2e112007 SERVICE QUALITY 2025-07-31 11:58:14+08:00
+  ALARM NAME  : The distribute fiber is broken or the OLT cannot receive expected optical signals from the ONT(LOSi/LOBi)
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 12, ONT ID: 18, Equipment ID: XX230v
+  DESCRIPTION : The OLT cannot receive expected optical signals from the ONT in four consecutive frames
+  CAUSE       : (1) The fiber is broken
+(2) The quality of the optical path is poor
+(3) The ONT hardware fails           
+  ADVICE      : (1) Check tributary optical fiber connection and backbone optical fiber orderly, clean the fiber connector and replace the fiber if necessary
+(2) Ensure that the optical attenuation of the optical path is normal
+(3) Reset the ONT or replace the ONT 
+  --- END                            
+                                     
+  ALARM 2133933 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2025-07-27 14:28:47+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 2, ONT ID: 40, Equipment ID: XX230v
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2133406 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2025-07-27 11:42:49+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 7, ONT ID: 51, Equipment ID: F660V7.1
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2124711 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2025-07-18 02:10:08+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 7, ONT ID: 20, Equipment ID: F670LV1.1.01
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2123668 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2025-07-16 17:15:45+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 0, ONT ID: 34, Equipment ID: XC220-G3v
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2120584 FAULT WARNING 0x2e112007 SERVICE QUALITY 2025-07-13 09:20:30+08:00
+  ALARM NAME  : The distribute fiber is broken or the OLT cannot receive expected optical signals from the ONT(LOSi/LOBi)
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 12, ONT ID: 12, Equipment ID: XR500v
+  DESCRIPTION : The OLT cannot receive expected optical signals from the ONT in four consecutive frames
+  CAUSE       : (1) The fiber is broken
+(2) The quality of the optical path is poor
+(3) The ONT hardware fails           
+  ADVICE      : (1) Check tributary optical fiber connection and backbone optical fiber orderly, clean the fiber connector and replace the fiber if necessary
+(2) Ensure that the optical attenuation of the optical path is normal
+(3) Reset the ONT or replace the ONT 
+  --- END                            
+                                     
+  ALARM 2117408 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2025-07-09 17:08:29+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 3, ONT ID: 30, Equipment ID: XX230v
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2113674 FAULT WARNING 0x2e112007 SERVICE QUALITY 2025-07-07 17:26:27+08:00
+  ALARM NAME  : The distribute fiber is broken or the OLT cannot receive expected optical signals from the ONT(LOSi/LOBi)
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 3, ONT ID: 15, Equipment ID: M10G
+  DESCRIPTION : The OLT cannot receive expected optical signals from the ONT in four consecutive frames
+  CAUSE       : (1) The fiber is broken
+(2) The quality of the optical path is poor
+(3) The ONT hardware fails           
+  ADVICE      : (1) Check tributary optical fiber connection and backbone optical fiber orderly, clean the fiber connector and replace the fiber if necessary
+(2) Ensure that the optical attenuation of the optical path is normal
+(3) Reset the ONT or replace the ONT 
+  --- END                            
+                                     
+  ALARM 2112460 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2025-07-05 17:56:17+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 14, ONT ID: 1, Equipment ID: XX230v
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2107539 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2025-06-29 10:56:07+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 1, ONT ID: 7, Equipment ID: XX230v
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2103226 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2025-06-25 15:57:26+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 15, ONT ID: 7, Equipment ID: F670LV1.1.01
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2098854 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2025-06-21 14:17:51+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 7, ONT ID: 40, Equipment ID: FD604GW-DG
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2096896 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2025-06-18 18:34:41+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 15, ONT ID: 13, Equipment ID: F660V7.1
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2086709 FAULT WARNING 0x2e112007 SERVICE QUALITY 2025-06-06 13:16:21+08:00
+  ALARM NAME  : The distribute fiber is broken or the OLT cannot receive expected optical signals from the ONT(LOSi/LOBi)
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 12, ONT ID: 57, Equipment ID: GONUMINI3
+  DESCRIPTION : The OLT cannot receive expected optical signals from the ONT in four consecutive frames
+  CAUSE       : (1) The fiber is broken
+(2) The quality of the optical path is poor
+(3) The ONT hardware fails           
+  ADVICE      : (1) Check tributary optical fiber connection and backbone optical fiber orderly, clean the fiber connector and replace the fiber if necessary
+(2) Ensure that the optical attenuation of the optical path is normal
+(3) Reset the ONT or replace the ONT 
+  --- END                            
+                                     
+  ALARM 2086587 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2025-06-06 09:42:49+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 14, ONT ID: 2, Equipment ID: EG8145V5
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2082062 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2025-05-31 19:36:15+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 12, ONT ID: 30, Equipment ID: XX230v
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2081241 FAULT WARNING 0x2e112007 SERVICE QUALITY 2025-05-30 14:59:38+08:00
+  ALARM NAME  : The distribute fiber is broken or the OLT cannot receive expected optical signals from the ONT(LOSi/LOBi)
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 3, ONT ID: 1, Equipment ID: F643V6.0
+  DESCRIPTION : The OLT cannot receive expected optical signals from the ONT in four consecutive frames
+  CAUSE       : (1) The fiber is broken
+(2) The quality of the optical path is poor
+(3) The ONT hardware fails           
+  ADVICE      : (1) Check tributary optical fiber connection and backbone optical fiber orderly, clean the fiber connector and replace the fiber if necessary
+(2) Ensure that the optical attenuation of the optical path is normal
+(3) Reset the ONT or replace the ONT 
+  --- END                            
+                                     
+  ALARM 2074866 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2025-05-25 09:35:51+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 15, ONT ID: 31, Equipment ID: F660V7.1
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2061574 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2025-05-08 17:48:42+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 3, ONT ID: 1, Equipment ID: XX230v
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2050762 FAULT WARNING 0x2e112007 SERVICE QUALITY 2025-05-03 09:55:30+08:00
+  ALARM NAME  : The distribute fiber is broken or the OLT cannot receive expected optical signals from the ONT(LOSi/LOBi)
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 15, ONT ID: 36, Equipment ID: F670LV9.0
+  DESCRIPTION : The OLT cannot receive expected optical signals from the ONT in four consecutive frames
+  CAUSE       : (1) The fiber is broken
+(2) The quality of the optical path is poor
+(3) The ONT hardware fails           
+  ADVICE      : (1) Check tributary optical fiber connection and backbone optical fiber orderly, clean the fiber connector and replace the fiber if necessary
+(2) Ensure that the optical attenuation of the optical path is normal
+(3) Reset the ONT or replace the ONT 
+  --- END                            
+                                     
+  ALARM 2044866 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2025-04-30 06:13:49+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 7, ONT ID: 49, Equipment ID: XX230v
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2035632 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2025-04-22 09:37:04+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 4, ONT ID: 7, Equipment ID: F670LV9.0
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2030465 FAULT WARNING 0x2e112007 SERVICE QUALITY 2025-04-16 05:33:17+08:00
+  ALARM NAME  : The distribute fiber is broken or the OLT cannot receive expected optical signals from the ONT(LOSi/LOBi)
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 12, ONT ID: 9, Equipment ID: F680V6.0.03
+  DESCRIPTION : The OLT cannot receive expected optical signals from the ONT in four consecutive frames
+  CAUSE       : (1) The fiber is broken
+(2) The quality of the optical path is poor
+(3) The ONT hardware fails           
+  ADVICE      : (1) Check tributary optical fiber connection and backbone optical fiber orderly, clean the fiber connector and replace the fiber if necessary
+(2) Ensure that the optical attenuation of the optical path is normal
+(3) Reset the ONT or replace the ONT 
+  --- END                            
+                                     
+  ALARM 2027314 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2025-04-10 17:49:10+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 7, ONT ID: 38, Equipment ID: XX230v
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 2006109 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2025-03-27 10:57:11+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 7, ONT ID: 66, Equipment ID: F670LV1.1.01
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 1955698 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2025-02-26 11:36:09+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 1, ONT ID: 5, Equipment ID: EG8145V5
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 1940520 FAULT WARNING 0x2e112007 SERVICE QUALITY 2025-02-21 14:15:28+08:00
+  ALARM NAME  : The distribute fiber is broken or the OLT cannot receive expected optical signals from the ONT(LOSi/LOBi)
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 15, ONT ID: 11, Equipment ID: EG8010H
+  DESCRIPTION : The OLT cannot receive expected optical signals from the ONT in four consecutive frames
+  CAUSE       : (1) The fiber is broken
+(2) The quality of the optical path is poor
+(3) The ONT hardware fails           
+  ADVICE      : (1) Check tributary optical fiber connection and backbone optical fiber orderly, clean the fiber connector and replace the fiber if necessary
+(2) Ensure that the optical attenuation of the optical path is normal
+(3) Reset the ONT or replace the ONT 
+  --- END                            
+                                     
+  ALARM 1897865 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2025-02-08 22:23:10+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 12, ONT ID: 41, Equipment ID: XX230v
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 1878663 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2025-02-03 01:53:09+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 3, ONT ID: 8, Equipment ID: F670LV1.1.01
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 1868714 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2025-01-28 14:35:04+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 14, ONT ID: 1, Equipment ID: F670LV1.1.01
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 1856990 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2025-01-25 06:58:43+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 14, ONT ID: 9, Equipment ID: XC220-G3v
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 1729626 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2024-12-22 14:39:53+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 7, ONT ID: 35, Equipment ID: R1v2
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 1728439 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2024-12-22 05:37:01+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 3, ONT ID: 27, Equipment ID: F670LV1.1.01
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 1714233 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2024-12-18 17:03:58+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 7, ONT ID: 12, Equipment ID: F601
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 1700730 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2024-12-12 07:20:43+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 3, ONT ID: 12, Equipment ID: F670LV9.0
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 1640040 FAULT WARNING 0x2e112007 SERVICE QUALITY 2024-11-01 13:28:45+08:00
+  ALARM NAME  : The distribute fiber is broken or the OLT cannot receive expected optical signals from the ONT(LOSi/LOBi)
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 12, ONT ID: 0, Equipment ID: F670LV1.1.01
+  DESCRIPTION : The OLT cannot receive expected optical signals from the ONT in four consecutive frames
+  CAUSE       : (1) The fiber is broken
+(2) The quality of the optical path is poor
+(3) The ONT hardware fails           
+  ADVICE      : (1) Check tributary optical fiber connection and backbone optical fiber orderly, clean the fiber connector and replace the fiber if necessary
+(2) Ensure that the optical attenuation of the optical path is normal
+(3) Reset the ONT or replace the ONT 
+  --- END                            
+                                     
+  ALARM 1633985 FAULT MAJOR 0x02310000 EQUIPMENT 2024-10-28 10:41:06+08:00
+  ALARM NAME  : The communication between the board and the control board fails
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 4, Board Name: H901GPHF
+  DESCRIPTION : The communication of the board interrupted ,the services in the board fail
+  CAUSE       : The board is loosened or is removed forcibly
+  ADVICE      : Install the board properly and fasten the screws
+  --- END                            
+                                     
+  ALARM 1633983 FAULT MAJOR 0x2e11a001 SERVICE QUALITY 2024-10-28 10:39:53+08:00
+  ALARM NAME  : The feeder fiber is broken or OLT can not receive any expected optical signals(LOS)
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 4, PortID: 14,The number of affected ONTs: 29, The number of DGi ONTs: 0
+  DESCRIPTION : The OLT cannot receive expected optical signals in four consecutive frames
+  CAUSE       : (1) The fiber is broken
+(2) The quality of the optical path is poor
+(3) The laser of the PON port is closed
+(4) No ONT has been on line at this port
+  ADVICE      : (1) Check feeder fiber connection and distribute fiber orderly
+(2) Clean the fiber connector and replace the fiber if necessary
+(3) Turn on the laser on the PON port
+(4) Ensure that some ONTs have been connected to the PON port
+  --- END                            
+                                     
+  ALARM 1633982 FAULT MAJOR 0x2e11a001 SERVICE QUALITY 2024-10-28 10:39:15+08:00
+  ALARM NAME  : The feeder fiber is broken or OLT can not receive any expected optical signals(LOS)
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 4, PortID: 15,The number of affected ONTs: 27, The number of DGi ONTs: 0
+  DESCRIPTION : The OLT cannot receive expected optical signals in four consecutive frames
+  CAUSE       : (1) The fiber is broken
+(2) The quality of the optical path is poor
+(3) The laser of the PON port is closed
+(4) No ONT has been on line at this port
+  ADVICE      : (1) Check feeder fiber connection and distribute fiber orderly
+(2) Clean the fiber connector and replace the fiber if necessary
+(3) Turn on the laser on the PON port
+(4) Ensure that some ONTs have been connected to the PON port
+  --- END                            
+                                     
+  ALARM 1582302 FAULT WARNING 0x2e112007 SERVICE QUALITY 2024-09-10 12:31:16+08:00
+  ALARM NAME  : The distribute fiber is broken or the OLT cannot receive expected optical signals from the ONT(LOSi/LOBi)
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 3, ONT ID: 13, Equipment ID: 310M
+  DESCRIPTION : The OLT cannot receive expected optical signals from the ONT in four consecutive frames
+  CAUSE       : (1) The fiber is broken
+(2) The quality of the optical path is poor
+(3) The ONT hardware fails           
+  ADVICE      : (1) Check tributary optical fiber connection and backbone optical fiber orderly, clean the fiber connector and replace the fiber if necessary
+(2) Ensure that the optical attenuation of the optical path is normal
+(3) Reset the ONT or replace the ONT 
+  --- END                            
+                                     
+  ALARM 1503477 FAULT WARNING 0x2e112007 SERVICE QUALITY 2024-06-21 08:05:50+08:00
+  ALARM NAME  : The distribute fiber is broken or the OLT cannot receive expected optical signals from the ONT(LOSi/LOBi)
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 5, PortID: 3, ONT ID: 2, Equipment ID: ONT1
+  DESCRIPTION : The OLT cannot receive expected optical signals from the ONT in four consecutive frames
+  CAUSE       : (1) The fiber is broken
+(2) The quality of the optical path is poor
+(3) The ONT hardware fails           
+  ADVICE      : (1) Check tributary optical fiber connection and backbone optical fiber orderly, clean the fiber connector and replace the fiber if necessary
+(2) Ensure that the optical attenuation of the optical path is normal
+(3) Reset the ONT or replace the ONT 
+  --- END                            
+                                     
+  ALARM 1394719 FAULT MINOR 0x2e11a00b SERVICE QUALITY 2024-03-21 09:35:28+08:00
+  ALARM NAME  : The dying-gasp of GPON ONTi (DGi) is generated
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 12, ONT ID: 3, Equipment ID: 310M
+  DESCRIPTION : The ONT is power off 
+  CAUSE       : The power supply of the ONT is abnormal
+  ADVICE      : Check the power supply of the ONT and ensure that the power supply works in the normal state
+  --- END                            
+                                     
+  ALARM 961683 FAULT WARNING 0x2e21a102 PROCESS ERROR 2023-02-25 11:06:35+08:00
+  ALARM NAME  : The GPON ONT configuration recovery fails
+  SRVEFF      : SA                   
+  PARAMETERS  : FrameID: 0, SlotID: 6, PortID: 1, ONT ID: 87
+  DESCRIPTION : The GPON ONT configuration recovery fails and some services are affected
+  CAUSE       : (1) The current configuration is beyond the actual capabilities of the ONT
+(2) The software of ONT is faulty    
+  ADVICE      : (1) Check the current configuration, and modify the configuration to match the actual capabilities of the ONT
+(2) Reset the ONT manually or re-register the ONT
+  --- END                            
+                                     
+                                     
+MA5800-X7#

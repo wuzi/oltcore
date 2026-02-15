@@ -2,6 +2,7 @@ use ssh2::Session;
 use std::io::{ErrorKind, Read, Write};
 use std::net::TcpStream;
 
+use crate::alarm::{parse_active_alarms_detail, parse_active_alarms_list, ActiveAlarms};
 use crate::error::{Error, Result};
 use crate::models::{Fsp, OntInfo, OpticalInfo, ServicePort};
 use crate::ont_info_summary::{parse_ont_info_summary, OntInfoSummary};
@@ -541,10 +542,22 @@ impl Connection {
         self.session.set_blocking(true);
         Ok(())
     }
-}
 
-impl Drop for Connection {
-    fn drop(&mut self) {
-        let _ = self.channel.close();
+    pub fn display_alarm_active_all_list(&mut self) -> Result<ActiveAlarms> {
+        if self.context.level != SessionLevel::Config {
+            return Err(Error::InvalidContext("Must be in config mode".to_string()));
+        }
+
+        let output = self.execute_command("display alarm active all list", "(config)#")?;
+        Ok(parse_active_alarms_list(&output))
+    }
+
+    pub fn display_alarm_active_all_detail(&mut self) -> Result<ActiveAlarms> {
+        if self.context.level != SessionLevel::Config {
+            return Err(Error::InvalidContext("Must be in config mode".to_string()));
+        }
+
+        let output = self.execute_command("display alarm active all detail", "(config)#")?;
+        Ok(parse_active_alarms_detail(&output))
     }
 }
