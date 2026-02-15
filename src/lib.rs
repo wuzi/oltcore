@@ -12,10 +12,13 @@ pub mod ssh;
 
 pub use alarm::{parse_active_alarms_detail, parse_active_alarms_list, ActiveAlarm, ActiveAlarms};
 pub use error::{Error, Result};
-pub use models::{Fsp, OntAutofindEntry, OntInfo, OpticalInfo, ServicePort};
+pub use models::{BoardSlot, Fsp, OntAutofindEntry, OntInfo, OpticalInfo, ServicePort};
 pub use ont_info_summary::{
     parse_ont_info_summary, OntInfoSummary, OntInfoSummaryOnt, OntInfoSummaryPort,
 };
-pub use parser::{parse_ont_autofind, parse_ont_info, parse_optical_info, parse_service_ports};
+pub use parser::{
+    parse_display_board, parse_ont_autofind, parse_ont_info, parse_optical_info,
+    parse_service_ports,
+};
 pub use r2d2::ConnectionManager;
 pub use ssh::Connection;

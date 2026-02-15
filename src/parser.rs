@@ -1,5 +1,5 @@
 use crate::{
-    models::{OntAutofindEntry, OntInfo, OpticalInfo, ServicePort},
+    models::{BoardSlot, OntAutofindEntry, OntInfo, OpticalInfo, ServicePort},
     Fsp,
 };
 use regex::Regex;
@@ -385,6 +385,92 @@ pub fn parse_service_ports(output: &str) -> Vec<ServicePort> {
     }
 
     ports
+}
+
+#[must_use]
+pub fn parse_display_board(output: &str) -> Vec<BoardSlot> {
+    let mut slots = Vec::new();
+
+    for line in output.lines() {
+        let line = line.trim();
+        if line.is_empty()
+            || line.starts_with('-')
+            || line.starts_with("Command")
+            || line.starts_with("SlotID")
+        {
+            continue;
+        }
+
+        let mut parts = line.split_whitespace();
+        let Some(slot_id_str) = parts.next() else {
+            continue;
+        };
+
+        let Ok(slot_id) = slot_id_str.parse() else {
+            continue;
+        };
+
+        let collected: Vec<&str> = parts.collect();
+        let (board_name, status, subtype0, subtype1, online_status) = match collected.len() {
+            0 => (None, None, None, None, None),
+            1 => (Some(collected[0]), None, None, None, None),
+            2 => (Some(collected[0]), Some(collected[1]), None, None, None),
+            3 => {
+                let online_status = if collected[2] == "Online" || collected[2] == "Offline" {
+                    Some(collected[2])
+                } else {
+                    None
+                };
+                (
+                    Some(collected[0]),
+                    Some(collected[1]),
+                    if online_status.is_some() {
+                        None
+                    } else {
+                        Some(collected[2])
+                    },
+                    None,
+                    online_status,
+                )
+            }
+            4 => {
+                let online_status = if collected[3] == "Online" || collected[3] == "Offline" {
+                    Some(collected[3])
+                } else {
+                    None
+                };
+                (
+                    Some(collected[0]),
+                    Some(collected[1]),
+                    Some(collected[2]),
+                    if online_status.is_some() {
+                        None
+                    } else {
+                        Some(collected[3])
+                    },
+                    online_status,
+                )
+            }
+            _ => (
+                Some(collected[0]),
+                Some(collected[1]),
+                Some(collected[2]),
+                Some(collected[3]),
+                Some(collected[4]),
+            ),
+        };
+
+        slots.push(BoardSlot {
+            slot_id,
+            board_name: board_name.map(str::to_string),
+            status: status.map(str::to_string),
+            subtype0: subtype0.map(str::to_string),
+            subtype1: subtype1.map(str::to_string),
+            online_status: online_status.map(str::to_string),
+        });
+    }
+
+    slots
 }
 
 #[must_use]

@@ -1,5 +1,7 @@
 use oltcore::parser::{extract_ont_id, parse_optical_info};
-use oltcore::{parse_ont_autofind, parse_ont_info, parse_service_ports, Fsp, ServicePort};
+use oltcore::{
+    parse_display_board, parse_ont_autofind, parse_ont_info, parse_service_ports, Fsp, ServicePort,
+};
 
 #[test]
 fn parse_ont_autofind_fixture() {
@@ -93,4 +95,25 @@ fn extract_ont_id_fixture() {
     let output = "ONTID :123\n";
     let id = extract_ont_id(output);
     assert_eq!(id, Some(123));
+}
+
+#[test]
+fn parse_display_board_fixture() {
+    let output = include_str!("fixtures/display_board.txt");
+    let boards = parse_display_board(output);
+    assert_eq!(boards.len(), 12);
+
+    let failed = boards.iter().find(|b| b.slot_id == 4).expect("slot 4");
+    assert_eq!(failed.board_name.as_deref(), Some("H901GPHF"));
+    assert_eq!(failed.status.as_deref(), Some("Failed"));
+    assert_eq!(failed.online_status.as_deref(), Some("Offline"));
+
+    let normal = boards.iter().find(|b| b.slot_id == 5).expect("slot 5");
+    assert_eq!(normal.board_name.as_deref(), Some("H901GPUF"));
+    assert_eq!(normal.status.as_deref(), Some("Normal"));
+    assert_eq!(normal.online_status.as_deref(), None);
+
+    let standby = boards.iter().find(|b| b.slot_id == 8).expect("slot 8");
+    assert_eq!(standby.board_name.as_deref(), Some("H902MPLA"));
+    assert_eq!(standby.status.as_deref(), Some("Standby_normal"));
 }

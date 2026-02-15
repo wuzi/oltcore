@@ -1,0 +1,23 @@
+MA5800-X7(config)#display board 0 
+{ <cr>||<K> }: 
+
+  Command:
+          display board 0 
+  -------------------------------------------------------------------------
+  SlotID  BoardName  Status          SubType0 SubType1    Online/Offline
+  -------------------------------------------------------------------------
+  0     
+  1     
+  2     
+  3     
+  4       H901GPHF   Failed                               Offline  
+  5       H901GPUF   Normal                           
+  6       H901GPUF   Normal                           
+  7     
+  8       H902MPLA   Standby_normal                   
+  9       H902MPLA   Active_normal                    
+  10      H901PILA   Normal                           
+  11      H901PILA   Normal                           
+  -------------------------------------------------------------------------
+
+MA5800-X7(config)#

@@ -100,6 +100,16 @@ pub struct ServicePort {
     pub vlan: u32,
 }
 
+#[derive(Debug, Clone, Serialize, Deserialize, ToSchema, PartialEq, Eq)]
+pub struct BoardSlot {
+    pub slot_id: u32,
+    pub board_name: Option<String>,
+    pub status: Option<String>,
+    pub subtype0: Option<String>,
+    pub subtype1: Option<String>,
+    pub online_status: Option<String>,
+}
+
 /// Frame/Slot/Port representation
 #[derive(Debug, Clone, Copy, Serialize, Deserialize, ToSchema, PartialEq, Eq, Default)]
 pub struct Fsp {
